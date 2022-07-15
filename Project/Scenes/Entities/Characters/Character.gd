@@ -1,6 +1,8 @@
 extends KinematicBody2D
 class_name Character
 
+var health = 3
+
 var input_vector : Vector2
 var velocity : Vector2 
 var shoot_speed = 10
@@ -17,3 +19,9 @@ func shoot():
 	get_parent().add_child(bullet)
 	bullet.global_position = shoot_pos.global_position
 	bullet.velocity = (shoot_pos.global_position - self.global_position) * shoot_speed
+
+func damage(amount):
+	health -= amount
+	
+	if health <= 0:
+		queue_free()
