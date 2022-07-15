@@ -1,6 +1,5 @@
-extends KinematicBody2D
+extends Character
 
-var velocity : Vector2
 var acceleration = 20000
 var max_speed = 1000
 
@@ -17,4 +16,5 @@ func _physics_process(delta):
 	else:
 		velocity = velocity.linear_interpolate(Vector2(0, 0), friction)
 	
-	velocity = move_and_slide(velocity)
+	$Aim.look_at(get_global_mouse_position())
+	

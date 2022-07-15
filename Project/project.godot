@@ -8,9 +8,19 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://Scenes/Entities/Character.gd"
+} ]
+_global_script_class_icons={
+"Character": ""
+}
+
 [application]
 
-config/name="Project"
+config/name="GMTK-2020"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://Art/icon.png"
 
