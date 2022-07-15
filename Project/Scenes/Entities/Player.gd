@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 var velocity : Vector2
-var acceleration = 1000
-var max_speed = 10
+var acceleration = 20000
+var max_speed = 1000
 
 var friction = 0.2
 
@@ -13,7 +13,7 @@ func _physics_process(delta):
 	
 	if input_vector != Vector2.ZERO:
 		velocity += input_vector.normalized() * acceleration * delta
-		velocity.clamped(max_speed)
+		velocity = velocity.clamped(max_speed)
 	else:
 		velocity = velocity.linear_interpolate(Vector2(0, 0), friction)
 	
