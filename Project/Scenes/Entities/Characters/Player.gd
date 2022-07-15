@@ -17,4 +17,8 @@ func _physics_process(delta):
 		velocity = velocity.linear_interpolate(Vector2(0, 0), friction)
 	
 	$Aim.look_at(get_global_mouse_position())
-	
+
+func _process(delta):
+	if Input.is_action_just_pressed('shoot'):
+		print('shoot')
+		shoot()
