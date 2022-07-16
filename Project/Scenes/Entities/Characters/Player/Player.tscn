@@ -34,6 +34,9 @@ script = ExtResource( 9 )
 [node name="DiceBoy" parent="Aim" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
 
+[node name="ShootDelay" type="Timer" parent="."]
+wait_time = 0.1
+
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource( 4 )
 
@@ -50,4 +53,5 @@ script = ExtResource( 8 )
 wait_time = 0.3
 one_shot = true
 
+[connection signal="timeout" from="ShootDelay" to="." method="_on_ShootDelay_timeout"]
 [connection signal="timeout" from="StateMachine/Rolling/RollTime" to="StateMachine/Rolling" method="_on_RollTime_timeout"]

@@ -20,3 +20,6 @@ func queue_free():
 	remove_child(camera)
 	get_parent().add_child(camera)
 	.queue_free()
+
+
+

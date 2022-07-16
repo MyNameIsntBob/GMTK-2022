@@ -80,6 +80,10 @@ collision_mask = 8
 [node name="CollisionShape" type="CollisionShape" parent="LoosePlayerDetector"]
 shape = SubResource( 3 )
 
+[node name="ShootDelay" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
 [connection signal="timeout" from="StateMachine/Idle/WaitTimer" to="StateMachine/Idle" method="_on_WaitTimer_timeout"]
 [connection signal="timeout" from="StateMachine/Wandering/WanderTimer" to="StateMachine/Wandering" method="_on_WonderTimer_timeout"]
 [connection signal="timeout" from="StateMachine/Attacking/ShootTimer" to="StateMachine/Attacking" method="_on_ShootTimer_timeout"]
@@ -87,5 +91,6 @@ shape = SubResource( 3 )
 [connection signal="animation_finished" from="Aim/FourSidedEnemy/RootNode/AnimationPlayer" to="StateMachine" method="_on_animation_finished"]
 [connection signal="body_entered" from="PlayerDetector" to="StateMachine" method="_on_PlayerDetector_body_entered"]
 [connection signal="body_exited" from="LoosePlayerDetector" to="StateMachine" method="_on_PlayerDetector_body_exited"]
+[connection signal="timeout" from="ShootDelay" to="." method="_on_ShootDelay_timeout"]
 
 [editable path="Aim/FourSidedEnemy"]
