@@ -1,18 +1,23 @@
 extends State
 
-var roll_speed := 2
+var roll_speed := 3
+var owner_collision_layer
 
-func ready():
+func _ready():
 	cancelable = false
+	owner_collision_layer = owner.collision_layer
+
 
 func enter():
+	owner.collision_layer = 0
 	owner.velocity = owner.velocity.normalized() * roll_speed
 	$RollTime.start()
 	owner.process_input = false
-	
-func exit():
-	owner.process_input = true
 
+
+func exit():
+	owner.collision_layer = owner_collision_layer
+	owner.process_input = true
 
 
 func _on_RollTime_timeout():

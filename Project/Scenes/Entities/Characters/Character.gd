@@ -5,7 +5,7 @@ export var health = 3
 export var shoot_speed = 10
 
 export var acceleration = 10
-export var max_speed = 1
+export var max_speed = 0.8
 
 export var friction = 0.2
 

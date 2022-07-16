@@ -35,7 +35,6 @@ func _physics_process(delta):
 
 
 func change_state(state_name):
-	print('change_state: ', state_name)
 	if current_state:
 		if !current_state.cancelable:
 			return

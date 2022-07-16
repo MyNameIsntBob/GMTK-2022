@@ -18,5 +18,4 @@ func exit():
 
 
 func _on_WaitTimer_timeout():
-	print('wander timer over')
 	state_machine.change_state('wandering')
