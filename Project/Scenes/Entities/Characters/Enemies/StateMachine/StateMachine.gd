@@ -3,8 +3,7 @@ extends Node
 export (NodePath) var start_state
 
 onready var idle = $Idle
-onready var moving = $Moving
-onready var rolling = $Rolling
+onready var wandering = $Wandering
 
 var states_map : Dictionary
 var current_state : State = null
@@ -12,8 +11,7 @@ var current_state : State = null
 func _ready():
 	states_map = {
 		'idle': idle,
-		'moving': moving,
-		'rolling': rolling
+		'wandering': wandering
 	} 
 	
 	owner = get_parent()
@@ -52,15 +50,4 @@ func _unhandled_input(event):
 
 
 func _check_for_state_change(event):
-	if moving_pressed(event):
-		change_state('moving')
-		
-#	if event.is_action_.is_action_just_pressed('shoot'):
-#		print('shoot')
-#		shoot()
-	
-	if event.is_action_pressed('roll') && owner.input_vector != Vector3.ZERO && current_state in [idle, moving]:
-		change_state('rolling')
-
-func moving_pressed(event):
-	return event.is_action_pressed('ui_left') || event.is_action_pressed('ui_right') || event.is_action_pressed('ui_up') || event.is_action_pressed('ui_down')
+	pass

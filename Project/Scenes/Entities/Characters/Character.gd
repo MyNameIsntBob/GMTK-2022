@@ -17,6 +17,7 @@ onready var shoot_pos = $Aim/Position
 onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
 
 func _physics_process(delta):
+	transform.origin.y = 0
 	
 	if process_input:
 		if input_vector != Vector3.ZERO:
@@ -31,13 +32,13 @@ func _physics_process(delta):
 	#		if input_vector.z == 0:
 	#			velocity.z *= friction
 			velocity = velocity.linear_interpolate(Vector3(0, 0, 0), friction)
-	
 	velocity = move_and_slide(velocity)
 
 
 func shoot():
 	var bullet : Bullet = BULLET.instance()
 	get_parent().add_child(bullet)
+	bullet.shot_by = self
 	bullet.transform.origin = shoot_pos.transform.origin
 	bullet.global_transform.origin = shoot_pos.global_transform.origin
 	bullet.velocity = (shoot_pos.global_transform.origin - self.global_transform.origin) * shoot_speed

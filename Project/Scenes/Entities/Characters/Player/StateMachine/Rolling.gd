@@ -2,6 +2,9 @@ extends State
 
 var roll_speed := 2
 
+func ready():
+	cancelable = false
+
 func enter():
 	owner.velocity = owner.velocity.normalized() * roll_speed
 	$RollTime.start()
