@@ -2,7 +2,7 @@ extends KinematicBody
 class_name Character
 
 export var health = 3
-export var shoot_speed = 0.1
+export var shoot_speed = 5
 
 export var acceleration = 10
 export var max_speed = 1
@@ -37,7 +37,7 @@ func shoot():
 	var bullet : Bullet = BULLET.instance()
 	get_parent().add_child(bullet)
 	bullet.transform.origin = shoot_pos.transform.origin
-#	bullet.global_transform.origin = shoot_pos.global_transform.origin
+	bullet.global_transform.origin = shoot_pos.global_transform.origin
 	bullet.velocity = (shoot_pos.global_transform.origin - self.global_transform.origin) * shoot_speed
 
 
