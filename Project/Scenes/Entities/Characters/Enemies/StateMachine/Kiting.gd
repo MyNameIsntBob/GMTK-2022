@@ -15,6 +15,8 @@ func enter():
 
 
 func exit():
+	if !is_instance_valid(owner):
+		return
 	owner.process_input = true
 	$KitingTimer.stop()
 
