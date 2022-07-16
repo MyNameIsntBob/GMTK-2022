@@ -24,6 +24,7 @@ collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0278361, 0 )
 shape = SubResource( 1 )
 
 [node name="StateMachine" type="Node" parent="."]
@@ -54,6 +55,7 @@ script = ExtResource( 8 )
 [node name="Aim" parent="." instance=ExtResource( 2 )]
 
 [node name="FourSidedEnemy" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0256853, 0 )
 
 [node name="PlayerDetector" type="Area" parent="."]
 collision_layer = 0
