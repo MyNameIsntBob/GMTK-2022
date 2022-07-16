@@ -9,7 +9,6 @@ var shoot_distance : float = 5.0 setget set_shoot_distance
 func set_shoot_distance(new_distance):
 	shoot_distance = new_distance
 	$KillTimer.wait_time = new_distance
-	print(new_distance)
 
 
 func _physics_process(delta):

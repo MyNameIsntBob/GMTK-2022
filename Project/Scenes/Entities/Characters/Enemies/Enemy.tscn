@@ -12,10 +12,10 @@
 extents = Vector3( 0.0646691, 0.0677278, 0.0718714 )
 
 [sub_resource type="SphereShape" id=2]
-radius = 0.47065
+radius = 0.808889
 
 [sub_resource type="SphereShape" id=3]
-radius = 0.755968
+radius = 1.17084
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 2

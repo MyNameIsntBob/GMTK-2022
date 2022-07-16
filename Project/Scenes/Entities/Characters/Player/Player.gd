@@ -2,19 +2,19 @@ extends Character
 
 var side : int setget set_side
 
-var side_stats = {
-	1: {'shoot_speed': 2, 'shoot_damage': 10, 'special': 'Sniper', 'shoot_distance': 5, 'bullet_speed': 15},
-	2: {'shoot_speed': 0.5, 'shoot_damage': 2, 'special': 'DoubleShot', 'shoot_distance': 5, 'bullet_speed': 10},
-	3: {'shoot_speed': 2, 'shoot_damage': 5, 'special': 'Shotgun', 'shoot_distance': 0.3, 'bullet_speed': 25},
-	4: {'shoot_speed': 1, 'shoot_damage': 1, 'special': 'CornerShot', 'shoot_distance': 5, 'bullet_speed': 10},
-	5: {'shoot_speed': 2, 'shoot_damage': 1, 'special': '', 'shoot_distance': 5, 'bullet_speed': 10},
-	6: {'shoot_speed': 0.1, 'shoot_damage': 1, 'special': 'MachineGun', 'shoot_distance': 5, 'bullet_speed': 10}
+var guns = {
+	1: 'Sniper',
+	2: 'DoubleShot',
+	3: 'Shotgun',
+	4: 'CornerShot',
+	5: 'Other',
+	6: 'MachineGun'
 }
 
 func _ready():
 	team = 1
 	health = 25
-	self.side = 3
+	self.side = 1
 
 func _process(delta):
 	if !is_instance_valid($Camera):
@@ -30,16 +30,16 @@ func _process(delta):
 
 func set_side(new_side):
 	shoot_pos = []
-	var stats = side_stats[new_side]
-	for child in $Aim.get_node(stats['special']).get_children():
+	gun_name = guns[new_side]
+	var gun = $Aim.get_node(gun_name)
+	for child in gun.get_children():
 		if child is Position3D:
 			shoot_pos.append(child)
 	
-	bullet_speed = stats['bullet_speed']
-	special_gun = stats['special']
-	shoot_distance = stats['shoot_distance']
-	shoot_damage = stats['shoot_damage']
-	$ShootDelay.wait_time = stats['shoot_speed']
+	bullet_speed = gun.bullet_speed
+	shoot_distance = gun.shoot_distance
+	shoot_damage = gun.shoot_damage
+	$ShootDelay.wait_time = gun.shoot_speed
 	
 	side = new_side
 
@@ -49,6 +49,3 @@ func queue_free():
 	remove_child(camera)
 	get_parent().add_child(camera)
 	.queue_free()
-
-
-

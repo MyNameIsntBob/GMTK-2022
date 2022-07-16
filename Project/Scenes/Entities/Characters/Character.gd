@@ -17,7 +17,7 @@ var velocity : Vector3
 
 var shoot_damage : float = 1
 var shoot_distance : float = 5.0
-var special_gun
+var gun_name
 var shoot_counter := 0
 
 onready var shoot_pos : Array = []
@@ -53,7 +53,7 @@ func shoot():
 	
 	$ShootDelay.start()
 	
-	if special_gun == 'DoubleShot':
+	if gun_name == 'DoubleShot':
 		shoot_counter = (shoot_counter + 1) % 2
 		shoot_gun(shoot_pos[shoot_counter])
 	
