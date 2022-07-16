@@ -1,40 +1,44 @@
-extends KinematicBody2D
+extends KinematicBody
 class_name Character
 
 export var health = 3
-export var shoot_speed = 10
+export var shoot_speed = 0.1
 
-export var acceleration = 20000
-export var max_speed = 1000
+export var acceleration = 10
+export var max_speed = 1
 
 export var friction = 0.2
 
-var input_vector : Vector2 = Vector2.ZERO
-var velocity : Vector2 
+var input_vector : Vector3 = Vector3.ZERO
+var velocity : Vector3
 
-onready var shoot_pos = $Aim/Position2D
+onready var shoot_pos = $Aim/Position
 onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
 
 func _physics_process(delta):
 	
-	if input_vector != Vector2.ZERO:
+	if input_vector != Vector3.ZERO:
 		velocity += input_vector.normalized() * acceleration * delta
-		velocity = velocity.clamped(max_speed)
+		var vel_2d = Vector2(velocity.x, velocity.z)
+		vel_2d = vel_2d.clamped(max_speed)
+		velocity.x = vel_2d.x
+		velocity.z = vel_2d.y
 	else:
-		velocity = velocity.linear_interpolate(Vector2(0, 0), friction)
+#		if input_vector.x == 0: 
+#			velocity.x *= friction
+#		if input_vector.z == 0:
+#			velocity.z *= friction
+		velocity = velocity.linear_interpolate(Vector3(0, 0, 0), friction)
 	
 	velocity = move_and_slide(velocity)
-
-
-func _process(delta):
-	$Health.text = str(health)
 
 
 func shoot():
 	var bullet : Bullet = BULLET.instance()
 	get_parent().add_child(bullet)
-	bullet.global_position = shoot_pos.global_position
-	bullet.velocity = (shoot_pos.global_position - self.global_position) * shoot_speed
+	bullet.transform.origin = shoot_pos.transform.origin
+#	bullet.global_transform.origin = shoot_pos.global_transform.origin
+	bullet.velocity = (shoot_pos.global_transform.origin - self.global_transform.origin) * shoot_speed
 
 
 func damage(amount):

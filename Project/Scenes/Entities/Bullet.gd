@@ -1,14 +1,14 @@
-extends KinematicBody2D
+extends KinematicBody
 class_name Bullet
 
 var attack_damage = 1
-var velocity : Vector2
+var velocity : Vector3
 
 func _physics_process(delta):
 	move_and_slide(velocity)
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area_body_entered(body):
 	if body == self:
 		return 
 	

@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 export (NodePath) var start_state
 
@@ -33,7 +33,6 @@ func _physics_process(delta):
 
 
 func change_state(state_name):
-	get_parent().get_node('State').text = state_name
 	if current_state:
 		current_state.exit()
 	

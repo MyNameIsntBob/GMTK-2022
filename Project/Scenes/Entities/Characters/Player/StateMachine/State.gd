@@ -6,7 +6,7 @@ class_name State
 
 export var cancelable : bool = true
 onready var sprite : AnimatedSprite
-onready var state_machine : Node2D = get_parent()
+onready var state_machine : Node = get_parent()
 
 # warning-ignore:unused_signal
 signal finished(next_state_name)

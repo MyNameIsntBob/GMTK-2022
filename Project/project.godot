@@ -9,12 +9,12 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "KinematicBody",
 "class": "Bullet",
 "language": "GDScript",
 "path": "res://Scenes/Entities/Bullet.gd"
 }, {
-"base": "KinematicBody2D",
+"base": "KinematicBody",
 "class": "Character",
 "language": "GDScript",
 "path": "res://Scenes/Entities/Characters/Character.gd"
@@ -71,6 +71,12 @@ shoot={
 "events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="Ground"
+3d_physics/layer_2="Character"
+3d_physics/layer_3="Bullet"
 
 [physics]
 
