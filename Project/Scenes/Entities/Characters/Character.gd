@@ -14,8 +14,13 @@ var input_vector : Vector3 = Vector3.ZERO
 var process_input : bool = true
 var velocity : Vector3
 
-onready var shoot_pos = $Aim/Position
+onready var shoot_pos : Array = []
 onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
+
+func _ready():
+	for child in $Aim.get_children():
+		if child is Position3D:
+			shoot_pos.append(child)
 
 func _physics_process(delta):
 	transform.origin.y = 0
@@ -37,12 +42,13 @@ func _physics_process(delta):
 
 
 func shoot():
-	var bullet : Bullet = BULLET.instance()
-	get_parent().add_child(bullet)
-	bullet.shot_by = self
-	bullet.transform.origin = shoot_pos.transform.origin
-	bullet.global_transform.origin = shoot_pos.global_transform.origin
-	bullet.velocity = (shoot_pos.global_transform.origin - self.global_transform.origin) * shoot_speed
+	for pos in shoot_pos:
+		var bullet : Bullet = BULLET.instance()
+		get_parent().add_child(bullet)
+		bullet.shot_by = self
+		bullet.transform.origin = pos.transform.origin
+		bullet.global_transform.origin = pos.global_transform.origin
+		bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * shoot_speed
 
 
 func damage(amount):

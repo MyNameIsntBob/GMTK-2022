@@ -2,7 +2,7 @@ extends Character
 
 func _ready():
 	team = 1
-	health = 7
+	health = 25
 
 func _process(delta):
 	if !is_instance_valid($Camera):
