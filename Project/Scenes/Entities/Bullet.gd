@@ -12,5 +12,7 @@ func _on_Area_body_entered(body):
 	if body == self:
 		return 
 	
+	print('hit')
+	
 	body.damage(attack_damage)
 	queue_free()
