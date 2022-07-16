@@ -7,14 +7,14 @@ var guns = {
 	2: 'DoubleShot',
 	3: 'Shotgun',
 	4: 'CornerShot',
-	5: 'Other',
+	5: 'WideShot',
 	6: 'MachineGun'
 }
 
 func _ready():
 	team = 1
 	health = 25
-	self.side = 1
+	self.side = 5
 
 func _process(delta):
 	if !is_instance_valid($Camera):

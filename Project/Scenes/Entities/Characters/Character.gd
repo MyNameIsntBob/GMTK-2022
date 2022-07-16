@@ -5,15 +5,14 @@ export var health = 3
 
 export var acceleration = 10
 export var max_speed = 0.8
-
 export var friction = 0.2
 
-var can_shoot : bool = true
 var team = 0
 var input_vector : Vector3 = Vector3.ZERO
 var process_input : bool = true
 var velocity : Vector3
 
+var can_shoot : bool = true
 var bullet_speed = 10
 var shoot_distance : float = 5.0
 var shoot_damage : float = 1
@@ -28,6 +27,7 @@ func _ready():
 		if child is Position3D:
 			shoot_pos.append(child)
 
+
 func _physics_process(delta):
 	transform.origin.y = 0
 	
@@ -39,10 +39,6 @@ func _physics_process(delta):
 			velocity.x = vel_2d.x
 			velocity.z = vel_2d.y
 		else:
-	#		if input_vector.x == 0: 
-	#			velocity.x *= friction
-	#		if input_vector.z == 0:
-	#			velocity.z *= friction
 			velocity = velocity.linear_interpolate(Vector3(0, 0, 0), friction)
 	velocity = move_and_slide(velocity)
 
@@ -72,6 +68,9 @@ func shoot_gun(pos):
 	bullet.attack_damage = shoot_damage
 	bullet.transform.origin = pos.transform.origin
 	bullet.global_transform.origin = pos.global_transform.origin
+	# Game breaks without this line, can't seam to find out how to get it to work without
+	if !bullet_speed:
+		bullet_speed = 10
 	bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * bullet_speed
 
 

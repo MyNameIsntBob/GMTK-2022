@@ -18,18 +18,23 @@ ss_reflections_enabled = true
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18381, 0, 0 )
+bullet_speed = null
 
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18381, 0, -0.42762 )
+bullet_speed = null
 
 [node name="Enemy3" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.644997, 0, -0.42762 )
+bullet_speed = null
 
 [node name="Enemy4" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.644997, 0, -0.90133 )
+bullet_speed = null
 
 [node name="Enemy5" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0226859, 0, -0.90133 )
+bullet_speed = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 3 )
