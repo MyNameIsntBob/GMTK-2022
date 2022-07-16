@@ -12,7 +12,7 @@ func _process(delta):
 	if pos:
 		$Aim.look_at(pos, Vector3.UP)
 	
-	if Input.is_action_just_pressed('shoot'):
+	if Input.is_action_pressed('shoot'):
 		shoot()
 
 func queue_free():
