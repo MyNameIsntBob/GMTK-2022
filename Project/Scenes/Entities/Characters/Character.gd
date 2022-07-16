@@ -2,7 +2,6 @@ extends KinematicBody
 class_name Character
 
 export var health = 3
-export var bullet_speed = 10
 
 export var acceleration = 10
 export var max_speed = 0.8
@@ -15,8 +14,9 @@ var input_vector : Vector3 = Vector3.ZERO
 var process_input : bool = true
 var velocity : Vector3
 
-var shoot_damage : float = 1
+var bullet_speed = 10
 var shoot_distance : float = 5.0
+var shoot_damage : float = 1
 var gun_name
 var shoot_counter := 0
 

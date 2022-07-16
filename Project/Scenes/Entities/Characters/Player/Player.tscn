@@ -16,6 +16,7 @@ extents = Vector3( 0.062, 0.0485351, 0.05 )
 collision_layer = 10
 collision_mask = 3
 script = ExtResource( 2 )
+bullet_speed = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0501159, 0 )
