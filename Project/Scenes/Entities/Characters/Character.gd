@@ -1,16 +1,28 @@
 extends KinematicBody2D
 class_name Character
 
-var health = 3
+export var health = 3
+export var shoot_speed = 10
 
-var input_vector : Vector2
+export var acceleration = 20000
+export var max_speed = 1000
+
+export var friction = 0.2
+
+var input_vector : Vector2 = Vector2.ZERO
 var velocity : Vector2 
-var shoot_speed = 10
 
 onready var shoot_pos = $Aim/Position2D
 onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
 
 func _physics_process(delta):
+	
+	if input_vector != Vector2.ZERO:
+		velocity += input_vector.normalized() * acceleration * delta
+		velocity = velocity.clamped(max_speed)
+	else:
+		velocity = velocity.linear_interpolate(Vector2(0, 0), friction)
+	
 	velocity = move_and_slide(velocity)
 
 

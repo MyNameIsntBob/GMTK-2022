@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "Character",
 "language": "GDScript",
 "path": "res://Scenes/Entities/Characters/Character.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Scenes/Entities/Characters/Player/StateMachine/State.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
-"Character": ""
+"Character": "",
+"State": ""
 }
 
 [application]
