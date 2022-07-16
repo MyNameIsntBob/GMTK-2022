@@ -2,7 +2,7 @@ extends KinematicBody
 class_name Character
 
 export var health = 3
-export var shoot_speed = 10
+export var bullet_speed = 10
 
 export var acceleration = 10
 export var max_speed = 0.8
@@ -14,6 +14,11 @@ var team = 0
 var input_vector : Vector3 = Vector3.ZERO
 var process_input : bool = true
 var velocity : Vector3
+
+var shoot_damage : float = 1
+var shoot_distance : float = 5.0
+var special_gun
+var shoot_counter := 0
 
 onready var shoot_pos : Array = []
 onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
@@ -48,14 +53,26 @@ func shoot():
 	
 	$ShootDelay.start()
 	
-	for pos in shoot_pos:
-		var bullet : Bullet = BULLET.instance()
-		get_parent().add_child(bullet)
-		bullet.shot_by = self
-		bullet.transform.origin = pos.transform.origin
-		bullet.global_transform.origin = pos.global_transform.origin
-		bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * shoot_speed
+	if special_gun == 'DoubleShot':
+		shoot_counter = (shoot_counter + 1) % 2
+		shoot_gun(shoot_pos[shoot_counter])
+	
+	else:
+		for pos in shoot_pos:
+			shoot_gun(pos)
+	
 	can_shoot = false
+
+
+func shoot_gun(pos):
+	var bullet : Bullet = BULLET.instance()
+	bullet.shoot_distance = shoot_distance
+	get_parent().add_child(bullet)
+	bullet.shot_by = self
+	bullet.attack_damage = shoot_damage
+	bullet.transform.origin = pos.transform.origin
+	bullet.global_transform.origin = pos.global_transform.origin
+	bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * bullet_speed
 
 
 func damage(amount):

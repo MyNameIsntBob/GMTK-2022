@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Objects/FourSidedEnemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Entities/Characters/Aim.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/Enemy.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/StateMachine/StateMachine.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/StateMachine/Wondering.gd" type="Script" id=5]
@@ -13,14 +12,13 @@
 extents = Vector3( 0.0646691, 0.0677278, 0.0718714 )
 
 [sub_resource type="SphereShape" id=2]
-radius = 1.77411
+radius = 0.47065
 
 [sub_resource type="SphereShape" id=3]
-radius = 4.22654
+radius = 0.755968
 
 [node name="Enemy" type="KinematicBody"]
 collision_layer = 2
-collision_mask = 0
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape" parent="."]
@@ -52,19 +50,22 @@ script = ExtResource( 8 )
 
 [node name="KitingTimer" type="Timer" parent="StateMachine/Kiting"]
 
-[node name="Aim" parent="." instance=ExtResource( 2 )]
+[node name="Aim" type="Spatial" parent="."]
 
 [node name="FourSidedEnemy" parent="Aim" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0256853, 0 )
-
-[node name="Position2" type="Position3D" parent="Aim"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0 )
 
 [node name="Position3" type="Position3D" parent="Aim"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0 )
 
 [node name="Position4" type="Position3D" parent="Aim"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2 )
+
+[node name="Position2" type="Position3D" parent="Aim"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0 )
+
+[node name="Position" type="Position3D" parent="Aim"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
 
 [node name="PlayerDetector" type="Area" parent="."]
 collision_layer = 0
