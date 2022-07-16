@@ -1,6 +1,6 @@
 extends State
 
-var wait_for := 3
+var wait_for := 1.5
 var wait_offset := 0.5
 
 func _ready():
@@ -9,8 +9,14 @@ func _ready():
 func enter():
 	$WaitTimer.wait_time = rand_range(wait_for - wait_offset, wait_for + wait_offset)
 	$WaitTimer.start()
+	if is_instance_valid(owner):
+		owner.input_vector = Vector3.ZERO
 
 
-func _on_WonderTimer_timeout():
-	state_machine.change_state('wondering')
+func exit():
+	$WaitTimer.stop()
 
+
+func _on_WaitTimer_timeout():
+	print('wander timer over')
+	state_machine.change_state('wandering')

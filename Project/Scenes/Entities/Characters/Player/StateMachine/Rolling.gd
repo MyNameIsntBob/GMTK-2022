@@ -8,7 +8,6 @@ func ready():
 func enter():
 	owner.velocity = owner.velocity.normalized() * roll_speed
 	$RollTime.start()
-	print('rolling')
 	owner.process_input = false
 	
 func exit():

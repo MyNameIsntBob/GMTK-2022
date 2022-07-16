@@ -1,13 +1,11 @@
 extends Character
 
+var target
 
 func _ready():
 	acceleration = 5
 	max_speed = 0.5
 	
-#func update(delta):
-#	owner.input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength('ui_left')
-#	owner.input_vector.z = Input.get_action_strength('ui_down') - Input.get_action_strength('ui_up')
-#
-#	if owner.input_vector == Vector3.ZERO:
-#		state_machine.change_state('idle')
+func _process(delta):
+	if target && is_instance_valid(target):
+		$Aim.look_at(target.transform.origin, Vector3.UP)

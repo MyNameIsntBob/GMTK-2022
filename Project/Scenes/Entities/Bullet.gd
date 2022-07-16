@@ -10,10 +10,8 @@ func _physics_process(delta):
 
 
 func _on_Area_body_entered(body):
-	if body == self || body == shot_by:
+	if body == self || body.team == shot_by.team:
 		return 
-	
-	print('hit')
 	
 	body.damage(attack_damage)
 	queue_free()

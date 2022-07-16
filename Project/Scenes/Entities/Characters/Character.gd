@@ -2,13 +2,14 @@ extends KinematicBody
 class_name Character
 
 export var health = 3
-export var shoot_speed = 5
+export var shoot_speed = 10
 
 export var acceleration = 10
 export var max_speed = 1
 
 export var friction = 0.2
 
+var team = 0
 var input_vector : Vector3 = Vector3.ZERO
 var process_input : bool = true
 var velocity : Vector3

@@ -54,10 +54,6 @@ func _unhandled_input(event):
 func _check_for_state_change(event):
 	if moving_pressed(event):
 		change_state('moving')
-		
-#	if event.is_action_.is_action_just_pressed('shoot'):
-#		print('shoot')
-#		shoot()
 	
 	if event.is_action_pressed('roll') && owner.input_vector != Vector3.ZERO && current_state in [idle, moving]:
 		change_state('rolling')
