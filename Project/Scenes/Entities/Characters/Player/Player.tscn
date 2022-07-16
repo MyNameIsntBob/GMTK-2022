@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scenes/Entities/Characters/Aim.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Entities/Characters/Player/GunStats.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Entities/Characters/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Objects/DiceBoy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Entities/Characters/Player/StateMachine/StateMachine.gd" type="Script" id=4]
@@ -29,10 +29,100 @@ script = ExtResource( 9 )
 
 [node name="Node2D" type="Node2D" parent="Camera"]
 
-[node name="Aim" parent="." instance=ExtResource( 1 )]
+[node name="Aim" type="Spatial" parent="."]
 
 [node name="DiceBoy" parent="Aim" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+
+[node name="Sniper" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 2.0
+shoot_damage = 10
+shoot_distance = 5.0
+bullet_speed = 15
+
+[node name="Position" type="Position3D" parent="Aim/Sniper"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
+
+[node name="DoubleShot" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 0.5
+shoot_damage = 2
+shoot_distance = 5.0
+bullet_speed = 10
+
+[node name="Position" type="Position3D" parent="Aim/DoubleShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 0, -0.1 )
+
+[node name="Position2" type="Position3D" parent="Aim/DoubleShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0, -0.1 )
+
+[node name="Shotgun" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 2.0
+shoot_damage = 5
+shoot_distance = 0.3
+bullet_speed = 25
+
+[node name="Position4" type="Position3D" parent="Aim/Shotgun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, 0, -0.1 )
+
+[node name="Position5" type="Position3D" parent="Aim/Shotgun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, 0, -0.1 )
+
+[node name="Position3" type="Position3D" parent="Aim/Shotgun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
+
+[node name="CornerShot" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 1.0
+shoot_damage = 3
+shoot_distance = 5.0
+bullet_speed = 10
+
+[node name="Position4" type="Position3D" parent="Aim/CornerShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.1 )
+
+[node name="Position5" type="Position3D" parent="Aim/CornerShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.1 )
+
+[node name="Position3" type="Position3D" parent="Aim/CornerShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0.1 )
+
+[node name="Position6" type="Position3D" parent="Aim/CornerShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0.1 )
+
+[node name="WideShot" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 2.0
+shoot_damage = 2
+shoot_distance = 2.0
+bullet_speed = 20
+
+[node name="Position4" type="Position3D" parent="Aim/WideShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, 0, -0.1 )
+
+[node name="Position6" type="Position3D" parent="Aim/WideShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 0, -0.1 )
+
+[node name="Position5" type="Position3D" parent="Aim/WideShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, 0, -0.1 )
+
+[node name="Position7" type="Position3D" parent="Aim/WideShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, -0.1 )
+
+[node name="Position3" type="Position3D" parent="Aim/WideShot"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
+
+[node name="MachineGun" type="Spatial" parent="Aim"]
+script = ExtResource( 1 )
+shoot_speed = 0.3
+shoot_damage = 1
+shoot_distance = 5.0
+bullet_speed = 10
+
+[node name="Position" type="Position3D" parent="Aim/MachineGun"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
 
 [node name="ShootDelay" type="Timer" parent="."]
 wait_time = 0.1

@@ -1,8 +1,20 @@
 extends Character
 
+var side : int setget set_side
+
+var guns = {
+	1: 'Sniper',
+	2: 'DoubleShot',
+	3: 'Shotgun',
+	4: 'CornerShot',
+	5: 'WideShot',
+	6: 'MachineGun'
+}
+
 func _ready():
 	team = 1
 	health = 25
+	self.side = 5
 
 func _process(delta):
 	if !is_instance_valid($Camera):
@@ -15,11 +27,25 @@ func _process(delta):
 	if Input.is_action_pressed('shoot'):
 		shoot()
 
+
+func set_side(new_side):
+	shoot_pos = []
+	gun_name = guns[new_side]
+	var gun = $Aim.get_node(gun_name)
+	for child in gun.get_children():
+		if child is Position3D:
+			shoot_pos.append(child)
+	
+	bullet_speed = gun.bullet_speed
+	shoot_distance = gun.shoot_distance
+	shoot_damage = gun.shoot_damage
+	$ShootDelay.wait_time = gun.shoot_speed
+	
+	side = new_side
+
+
 func queue_free():
 	var camera = $Camera
 	remove_child(camera)
 	get_parent().add_child(camera)
 	.queue_free()
-
-
-
