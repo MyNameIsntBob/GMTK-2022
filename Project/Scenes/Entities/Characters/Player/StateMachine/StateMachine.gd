@@ -4,6 +4,7 @@ export (NodePath) var start_state
 
 onready var idle = $Idle
 onready var moving = $Moving
+onready var rolling = $Rolling
 
 var states_map : Dictionary
 var current_state : State = null
@@ -11,7 +12,8 @@ var current_state : State = null
 func _ready():
 	states_map = {
 		'idle': idle,
-		'moving': moving
+		'moving': moving,
+		'rolling': rolling
 	} 
 	
 	owner = get_parent()
@@ -57,8 +59,8 @@ func _check_for_state_change(event):
 #		print('shoot')
 #		shoot()
 	
-#	if event.is_action_pressed('roll') && current_state in [idle, moving]:
-#		change_state('roll')
+	if event.is_action_pressed('roll') && owner.input_vector != Vector3.ZERO && current_state in [idle, moving]:
+		change_state('rolling')
 
 func moving_pressed(event):
 	return event.is_action_pressed('ui_left') || event.is_action_pressed('ui_right') || event.is_action_pressed('ui_up') || event.is_action_pressed('ui_down')

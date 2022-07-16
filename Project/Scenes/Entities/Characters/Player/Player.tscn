@@ -44,5 +44,9 @@ script = ExtResource( 6 )
 script = ExtResource( 8 )
 
 [node name="RollTime" type="Timer" parent="StateMachine/Rolling"]
+wait_time = 0.5
+one_shot = true
 
 [node name="DiceBoy" parent="." instance=ExtResource( 3 )]
+
+[connection signal="timeout" from="StateMachine/Rolling/RollTime" to="StateMachine/Rolling" method="_on_RollTime_timeout"]

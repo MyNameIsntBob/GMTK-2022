@@ -10,6 +10,7 @@ export var max_speed = 1
 export var friction = 0.2
 
 var input_vector : Vector3 = Vector3.ZERO
+var process_input : bool = true
 var velocity : Vector3
 
 onready var shoot_pos = $Aim/Position
@@ -17,18 +18,19 @@ onready var BULLET = preload("res://Scenes/Entities/Bullet.tscn")
 
 func _physics_process(delta):
 	
-	if input_vector != Vector3.ZERO:
-		velocity += input_vector.normalized() * acceleration * delta
-		var vel_2d = Vector2(velocity.x, velocity.z)
-		vel_2d = vel_2d.clamped(max_speed)
-		velocity.x = vel_2d.x
-		velocity.z = vel_2d.y
-	else:
-#		if input_vector.x == 0: 
-#			velocity.x *= friction
-#		if input_vector.z == 0:
-#			velocity.z *= friction
-		velocity = velocity.linear_interpolate(Vector3(0, 0, 0), friction)
+	if process_input:
+		if input_vector != Vector3.ZERO:
+			velocity += input_vector.normalized() * acceleration * delta
+			var vel_2d = Vector2(velocity.x, velocity.z)
+			vel_2d = vel_2d.clamped(max_speed)
+			velocity.x = vel_2d.x
+			velocity.z = vel_2d.y
+		else:
+	#		if input_vector.x == 0: 
+	#			velocity.x *= friction
+	#		if input_vector.z == 0:
+	#			velocity.z *= friction
+			velocity = velocity.linear_interpolate(Vector3(0, 0, 0), friction)
 	
 	velocity = move_and_slide(velocity)
 
