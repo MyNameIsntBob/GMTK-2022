@@ -9,6 +9,8 @@ onready var rolling = $Rolling
 var states_map : Dictionary
 var current_state : State = null
 
+var has_roll : bool = true
+
 func _ready():
 	states_map = {
 		'idle': idle,
@@ -33,6 +35,13 @@ func _physics_process(delta):
 
 
 func change_state(state_name):
+	if state_name == 'rolling':
+		if has_roll:
+			has_roll = false
+			$RollColldown.start()
+		else:
+			return
+	
 	if current_state:
 		current_state.exit()
 	
@@ -60,3 +69,7 @@ func _check_for_state_change(event):
 
 func moving_pressed(event):
 	return event.is_action_pressed('ui_left') || event.is_action_pressed('ui_right') || event.is_action_pressed('ui_up') || event.is_action_pressed('ui_down')
+
+
+func _on_RollColldown_timeout():
+	has_roll = true

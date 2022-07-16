@@ -53,5 +53,10 @@ script = ExtResource( 8 )
 wait_time = 0.3
 one_shot = true
 
+[node name="RollColldown" type="Timer" parent="StateMachine"]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="timeout" from="ShootDelay" to="." method="_on_ShootDelay_timeout"]
 [connection signal="timeout" from="StateMachine/Rolling/RollTime" to="StateMachine/Rolling" method="_on_RollTime_timeout"]
+[connection signal="timeout" from="StateMachine/RollColldown" to="StateMachine" method="_on_RollColldown_timeout"]
