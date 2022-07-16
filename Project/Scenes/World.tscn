@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Entities/Characters/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Objects/DiceBoy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Entities/Characters/Enemy.tscn" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.62064, 0.107109, 2.21765 )
@@ -16,8 +16,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.109705, 0 )
 [node name="Ground" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 1 )
 
-[node name="DiceBoy" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.743747, 0, 0 )
-
-[node name="DiceBoy2" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.715975, 0, 0.545549 )
+[node name="Enemy" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18381, 0, 0 )
