@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Roll.dae-2a7e9b46d001ded9b4424b55c8b8d800.scn"
+path="res://.import/Arch.dae-08be09fe61f9c3e715860fea7003713e.scn"
 
 [deps]
 
-source_file="res://Art/3DModels/Player/Roll.dae"
-dest_files=[ "res://.import/Roll.dae-2a7e9b46d001ded9b4424b55c8b8d800.scn" ]
+source_file="res://Art/3DModels/Environment/Arch.dae"
+dest_files=[ "res://.import/Arch.dae-08be09fe61f9c3e715860fea7003713e.scn" ]
 
 [params]
 
@@ -16,7 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-nodes/use_legacy_names=true
+nodes/use_legacy_names=false
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -31,8 +31,8 @@ external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
 animation/filter_script=""
-animation/storage=true
-animation/keep_custom_tracks=true
+animation/storage=false
+animation/keep_custom_tracks=false
 animation/optimizer/enabled=true
 animation/optimizer/max_linear_error=0.05
 animation/optimizer/max_angular_error=0.01
