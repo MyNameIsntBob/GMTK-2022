@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://Art/UI/MenuButton/MenuButton.png" type="Texture" id=2]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -14,35 +15,83 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
-margin_left = 479.0
-margin_top = 254.0
-margin_right = 544.0
-margin_bottom = 346.0
+margin_left = 512.0
+margin_top = 225.0
+margin_right = 512.0
+margin_bottom = 375.0
+custom_constants/separation = 50
 
-[node name="Play" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_right = 65.0
-margin_bottom = 20.0
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Play" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer/Sprite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -100.0
+margin_right = -250.0
+margin_bottom = -100.0
 text = "Play"
+flat = true
 
-[node name="Controls" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 24.0
-margin_right = 65.0
-margin_bottom = 44.0
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 50.0
+margin_bottom = 50.0
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer2"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Controls" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer2/Sprite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -100.0
+margin_right = -250.0
+margin_bottom = -100.0
 text = "Controls"
+flat = true
 
-[node name="Credits" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 48.0
-margin_right = 65.0
-margin_bottom = 68.0
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 100.0
+margin_bottom = 100.0
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer3"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Credits" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer3/Sprite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -100.0
+margin_right = -250.0
+margin_bottom = -100.0
 text = "Credits"
+flat = true
 
-[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_top = 72.0
-margin_right = 65.0
-margin_bottom = 92.0
+[node name="MarginContainer4" type="MarginContainer" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 150.0
+margin_bottom = 150.0
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer4"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+
+[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/MarginContainer4/Sprite"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -250.0
+margin_top = -100.0
+margin_right = -250.0
+margin_bottom = -100.0
 text = "Exit"
+flat = true
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer/Sprite/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer2/Sprite/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer3/Sprite/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/MarginContainer4/Sprite/Exit" to="." method="_on_Exit_pressed"]
