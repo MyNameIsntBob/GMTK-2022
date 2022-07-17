@@ -76,6 +76,7 @@ func shoot_gun(pos):
 	if !bullet_speed:
 		bullet_speed = 10
 	bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * bullet_speed
+	bullet.transform.basis = $Aim.transform.basis
 
 
 func damage(amount, direction):
@@ -84,6 +85,7 @@ func damage(amount, direction):
 	velocity += direction
 	
 	if health <= 0:
+		Ui.score += 1
 		queue_free()
 
 

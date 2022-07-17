@@ -10,7 +10,10 @@ export (NodePath) var dash_highlight_path
 var dash_highlight_node
 export (NodePath) var reload_bar_path
 var reload_bar_node
+export (NodePath) var score_label_path
+var score_label_node
 
+var score : int = 0 setget set_score
 var hp : int setget set_hp
 var side : int = 1 setget set_side
 var dash_colldown : float setget set_dash_colldown
@@ -24,6 +27,8 @@ func _ready():
 	dash_bar_node = get_node(dash_bar_path)
 	reload_bar_node = get_node(reload_bar_path)
 	dash_highlight_node = get_node(dash_highlight_path)
+	score_label_node = get_node(score_label_path)
+	set_score(0)
 
 
 func set_side(new_side):
@@ -56,6 +61,11 @@ func set_reload_time(new_reload_time):
 func set_max_reload_time(new_max_reload_time):
 	reload_bar_node.max_value = new_max_reload_time
 	max_reload_time = new_max_reload_time
+
+
+func set_score(new_score):
+	score_label_node.text = 'Score:\n' + str(new_score)
+	score = new_score
 
 
 func _input(event):

@@ -13,14 +13,14 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
-margin_left = 414.0
-margin_top = 174.0
-margin_right = 610.0
-margin_bottom = 426.0
+margin_left = 401.0
+margin_top = 165.0
+margin_right = 622.0
+margin_bottom = 434.0
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
-margin_right = 196.0
-margin_bottom = 252.0
+margin_right = 221.0
+margin_bottom = 269.0
 text = "Credits:
 
 Programmer/Game Developer:
@@ -35,6 +35,7 @@ Reschyro
 Sound Designer/Music:
 Speedy360
 
-"
+Assistant to the Regional Manager:
+Connor"
 
 [node name="BackButton" parent="MarginContainer" instance=ExtResource( 1 )]
