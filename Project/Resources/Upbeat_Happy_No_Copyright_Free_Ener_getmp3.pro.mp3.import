@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Upbeat_Happy_No_Copyright_Free_Ener_getmp3.pro.mp3-a237329475c533d83cee5b21904223b1.mp3str"
+
+[deps]
+
+source_file="res://Resources/Upbeat_Happy_No_Copyright_Free_Ener_getmp3.pro.mp3"
+dest_files=[ "res://.import/Upbeat_Happy_No_Copyright_Free_Ener_getmp3.pro.mp3-a237329475c533d83cee5b21904223b1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Art/UI/Dice/DiceUI-Final_0007_Blue.png" type="Texture" id=1]
 [ext_resource path="res://Art/UI/Bars/HealthBarUI-Final_0002_Layer-10.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Art/UI/Bars/HealthBarUI-Final_0000_Layer-11.png" type="Texture" id=15]
 [ext_resource path="res://Art/UI/Dice/DiceUi_Final_0013_DiceFullyCharged.png" type="Texture" id=16]
 [ext_resource path="res://Art/UI/ReloadBar/ReloadUI-Final_0002_Grey.png" type="Texture" id=17]
+[ext_resource path="res://Resources/Upbeat_Happy_No_Copyright_Free_Ener_getmp3.pro.mp3" type="AudioStream" id=18]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 10 )
@@ -230,3 +231,7 @@ text = "Score:
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+autoplay = true

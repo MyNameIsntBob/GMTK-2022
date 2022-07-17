@@ -44,6 +44,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.70526, 0, 1.51629 )
 wait_time = 3.0
 autostart = true
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
-
 [connection signal="timeout" from="SpawnPoints/SpawnTimer" to="SpawnPoints" method="_on_SpawnTimer_timeout"]

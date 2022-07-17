@@ -8,12 +8,14 @@ const credits = 'res://Scenes/Credits.tscn'
 
 func _ready():
 	for node in Ui.get_children():
-		node.hide()
+		if node is Control:
+			node.hide()
 
 
 func _on_Play_pressed():
 	for node in Ui.get_children():
-		node.show()
+		if node is Control:
+			node.show()
 	get_tree().change_scene(game)
 
 
