@@ -9,6 +9,7 @@ func _ready():
 
 
 func enter():
+	state_machine.dice_boy.animation = 'Roll'
 	owner.side = randi()%6+1
 	owner.collision_layer = 0
 	owner.velocity = owner.velocity.normalized() * roll_speed

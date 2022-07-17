@@ -6,6 +6,8 @@ onready var idle = $Idle
 onready var moving = $Moving
 onready var rolling = $Rolling
 
+onready var dice_boy = get_parent().get_node('Aim/DiceBoy')
+
 var states_map : Dictionary
 var current_state : State = null
 
