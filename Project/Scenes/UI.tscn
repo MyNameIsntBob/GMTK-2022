@@ -157,14 +157,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 93.0
-margin_top = -251.0
-margin_right = 1117.0
-margin_bottom = 348.0
+margin_left = -79.0
+margin_top = -79.0
+margin_right = 945.0
+margin_bottom = 520.0
 grow_horizontal = 0
 grow_vertical = 0
-rect_rotation = 90.0
-rect_scale = Vector2( 0.334, 0.334 )
+rect_scale = Vector2( 0.1, 0.1 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 2
@@ -173,6 +172,9 @@ alignment = 2
 margin_left = 637.0
 margin_right = 937.0
 margin_bottom = 599.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
 margin_right = 300.0
@@ -187,7 +189,6 @@ max_value = 5.0
 step = 0.1
 texture_under = ExtResource( 12 )
 texture_progress = ExtResource( 11 )
-fill_mode = 1
 __meta__ = {
 "_edit_lock_": true
 }
@@ -197,3 +198,6 @@ margin_left = 941.0
 margin_right = 1024.0
 margin_bottom = 599.0
 rect_min_size = Vector2( 83, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
