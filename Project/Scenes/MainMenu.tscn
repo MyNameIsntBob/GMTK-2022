@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Art/UI/MenuButton/MenuButton.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Buttons.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Art/Small.png" type="Texture" id=4]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -14,6 +15,11 @@ anchor_bottom = 1.0
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 margin_right = 1024.0
 margin_bottom = 600.0
+
+[node name="Small" type="Sprite" parent="MarginContainer/CenterContainer"]
+position = Vector2( 1198, 703.25 )
+scale = Vector2( 3.45299, 2.93738 )
+texture = ExtResource( 4 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
 margin_left = 512.0
