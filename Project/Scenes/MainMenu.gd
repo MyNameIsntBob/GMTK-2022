@@ -2,6 +2,8 @@ extends CanvasLayer
 
 
 const game = 'res://Scenes/World.tscn'
+const controls = 'res://Scenes/Controls.tscn'
+const credits = 'res://Scenes/Credits.tscn'
 
 
 func _ready():
@@ -17,8 +19,13 @@ func _on_Play_pressed():
 
 
 func _on_Controls_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene(controls)
+
+
+func _on_Credits_pressed():
+	get_tree().change_scene(credits)
 
 
 func _on_Exit_pressed():
-	pass # Replace with function body.
+	get_tree().quit()
+

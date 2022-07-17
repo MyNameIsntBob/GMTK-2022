@@ -7,32 +7,47 @@
 [node name="DiceGuy1" parent="." index="0"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 
+[node name="Lt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, -0.00636326, 0.00056777 )
+
+[node name="Rt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, -0.00636326, 0.00056777 )
+
+[node name="Ct_Bag_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0117248, -0.00474804 )
+
 [node name="Ct_BagFlap_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="7"]
-transform = Transform( 1, 0, 0, 0, 0.99986, 0.0167269, 0, -0.0167269, 0.99986, 0, 0.0022087, 3.88518e-05 )
+transform = Transform( 0.889672, 0.453304, 0.0547686, -0.0541326, -0.0143886, 0.99843, 0.45338, -0.89124, 0.0117375, -0.00182905, -0.00600752, -0.0543973 )
 
 [node name="Ct_BagRoll_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="8"]
-transform = Transform( 1, 0, 0, 0, 0.999871, 0.0161006, 0, -0.0161006, 0.999871, 0, 0.010462, -0.00636429 )
+transform = Transform( 0.895373, 0.444858, -0.0202325, -0.0132191, 0.0719652, 0.997319, 0.445121, -0.892705, 0.0703162, 0.00156252, -0.0132226, -0.062395 )
+
+[node name="Rt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00344302, 0 )
 
 [node name="Lt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 0.999284, -0.0378521, 0, 0.0378521, 0.999284, 0, 8.79389e-07, 0.000308956 )
+transform = Transform( 1, 0, 0, 0, 0.99681, 0.0798147, 0, -0.0798147, 0.99681, 0, 0.003425, 0.000199568 )
 
 [node name="Ct_Back_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
-transform = Transform( 1, 0, 0, 0, 0.99986, 0.0167269, 0, -0.0167269, 0.99986, 0, 6.00028e-07, 3.88518e-05 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Rt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( -0.190816, 0.38494, -0.748586, -0.0108624, 0.879704, 0.474527, 0.297329, 0.27918, -0.46308, -0.0138258, -0.00323997, -0.00630244 )
 
 [node name="Lt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform = Transform( 0.030865, -0.886557, 0.453868, -0.00308988, 0.454963, 0.890465, -0.343224, -0.083821, 0.0327985, 0.0152691, -0.00178641, -0.00188526 )
+
+[node name="Ct_Bag_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="2"]
+transform = Transform( 0.895373, 0.444858, -0.0202325, -0.0132191, 0.0719652, 0.997319, 0.445121, -0.892705, 0.0703162, -0.00227942, -0.00977976, -0.0544959 )
 
 [node name="Ct_BagFlap_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Ct_BagRoll_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 0.997877, 0.0651278, 0, -0.0651278, 0.997877, 0, 0.000604506, 0.000229583 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="roll" parent="DiceGuy1/DiceGuy_Body" index="1"]
-transform = Transform( 0.3833, 0, 0, 0, 0.383137, 0.0111559, 0, -0.0111559, 0.383137, 0, 0.00446256, -0.000101694 )
+transform = Transform( 1.2662, 0, 0, 0, -0.784158, 0.917478, 0, -0.917478, -0.784158, 0, 0.0123512, 0.00558632 )
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "default"
