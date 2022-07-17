@@ -6,6 +6,8 @@ export (NodePath) var hp_bar_path
 var hp_bar_node
 export (NodePath) var dash_bar_path
 var dash_bar_node
+export (NodePath) var dash_highlight_path
+var dash_highlight_node
 export (NodePath) var reload_bar_path
 var reload_bar_node
 
@@ -21,6 +23,7 @@ func _ready():
 	hp_bar_node = get_node(hp_bar_path)
 	dash_bar_node = get_node(dash_bar_path)
 	reload_bar_node = get_node(reload_bar_path)
+	dash_highlight_node = get_node(dash_highlight_path)
 
 
 func set_side(new_side):
@@ -38,6 +41,11 @@ func set_hp(new_hp):
 func set_dash_colldown(new_time):
 	dash_bar_node.value = new_time
 	dash_colldown = new_time
+	
+	if new_time >= 5:
+		dash_highlight_node.show()
+	else:
+		dash_highlight_node.hide()
 
 
 func set_reload_time(new_reload_time):
