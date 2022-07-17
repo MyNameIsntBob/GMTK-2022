@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Entities/Characters/Player/GunStats.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Entities/Characters/Player/Player.gd" type="Script" id=2]
@@ -6,8 +6,12 @@
 [ext_resource path="res://Scenes/Entities/Characters/Player/StateMachine/StateMachine.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Entities/Characters/Player/StateMachine/Idle.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/Entities/Characters/Player/StateMachine/Moving.gd" type="Script" id=6]
+[ext_resource path="res://Objects/DiceBoyWalk.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Entities/Characters/Player/StateMachine/Rolling.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Entities/Characters/Player/PlayerCamera.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Entities/Characters/Player/DiceBoy.gd" type="Script" id=10]
+[ext_resource path="res://Objects/DiceBoyIdle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Roll.tscn" type="PackedScene" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.062, 0.0485351, 0.05 )
@@ -31,8 +35,9 @@ script = ExtResource( 9 )
 
 [node name="Aim" type="Spatial" parent="."]
 
-[node name="DiceBoy" parent="Aim" instance=ExtResource( 3 )]
+[node name="DiceBoy3" parent="Aim" instance=ExtResource( 3 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0 )
+visible = false
 
 [node name="Sniper" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
@@ -132,6 +137,91 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
 [node name="Position" type="Position3D" parent="Aim"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
 
+[node name="DiceBoy" type="Spatial" parent="Aim"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.0202792, 0 )
+script = ExtResource( 10 )
+
+[node name="Walk" parent="Aim/DiceBoy" instance=ExtResource( 7 )]
+visible = false
+
+[node name="Lt_Arm_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="2"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, 0.00496084, 0.00847638, 0.00085435 )
+
+[node name="Rt_Arm_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="4"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, -0.00503429, 0.00856481, 0.000658904 )
+
+[node name="Ct_Bag_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="6"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, 1.75832e-05, 0.00319902, -0.00459623 )
+
+[node name="Ct_BagFlap_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="7"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, -8.2171e-05, 0.00234056, 0.000142524 )
+
+[node name="Ct_BagRoll_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="8"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, 0.000115873, 0.0107394, -0.00605911 )
+
+[node name="Rt_Leg_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="0"]
+transform = Transform( 1, -9.6e-05, 9.6e-05, 9.6e-05, 1, 9.216e-09, -9.6e-05, 0, 1, 1.2e-07, 2.4e-07, 8.35657e-05 )
+
+[node name="Lt_Leg_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
+transform = Transform( 0.996954, -0.0360944, 0.0691279, 0.0417091, 0.995793, -0.0815815, -0.0658925, 0.0842162, 0.994267, 5.11141e-05, 0.000638314, 0.000669499 )
+
+[node name="Ct_Back_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
+transform = Transform( 0.99977, 0.0089152, -0.0195191, -0.00905888, 0.999933, -0.007285, 0.0194529, 0.00746014, 0.999783, -8.2171e-05, 0.000132464, 0.000142524 )
+
+[node name="Rt_Arm_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
+transform = Transform( 0.997833, 0.0630048, -0.0190045, -0.0605946, 0.992285, 0.10816, 0.0256725, -0.106774, 0.993952, -0.00039157, 2.54297e-05, 0.000784639 )
+
+[node name="Lt_Arm_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
+transform = Transform( 0.999, -0.0404209, 0.0190915, 0.0417341, 0.996362, -0.0742974, -0.0160189, 0.0750199, 0.997054, 0.000251566, 0.000170623, -0.000376811 )
+
+[node name="Ct_BagFlap_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.992322, -0.123683, 0, 0.123683, 0.992322, 0, -0.000910028, -0.00113205 )
+
+[node name="Ct_BagRoll_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000263984, 0 )
+
+[node name="Idle" parent="Aim/DiceBoy" instance=ExtResource( 11 )]
+visible = false
+
+[node name="Lt_Arm_00_Pad" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Joint" index="2"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, 0.00494901, 0.00859163, 0.000615259 )
+
+[node name="Rt_Arm_00_Pad" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Joint" index="4"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, -0.00504992, 0.00847335, 0.000532117 )
+
+[node name="Ct_Bag_00_Pad" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Joint" index="6"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, 5.71009e-05, 0.00318011, -0.00475016 )
+
+[node name="Ct_BagFlap_00_Pad" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Joint" index="7"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, 2.7502e-05, 0.00234779, -3.57323e-06 )
+
+[node name="Ct_BagRoll_00_Pad" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Joint" index="8"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, -1.94776e-05, 0.0107138, -0.00625925 )
+
+[node name="Ct_Back_Control" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
+transform = Transform( 0.999896, -0.0118418, -0.00829295, 0.0118286, 0.999929, -0.00163792, 0.00831175, 0.00153966, 0.999964, 2.7502e-05, 0.000139694, -3.57323e-06 )
+
+[node name="Rt_Arm_Control" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
+transform = Transform( 0.999945, 0.0104615, 5.46869e-05, -0.0104614, 0.999885, 0.0109238, 5.95984e-05, -0.0109238, 0.99994, -7.08969e-05, -0.000150105, 7.29426e-05 )
+
+[node name="Lt_Arm_Control" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
+transform = Transform( 0.999949, -0.0101003, -5.05274e-05, 0.0101003, 0.999889, 0.0109238, -5.98124e-05, -0.0109238, 0.99994, 5.63183e-05, -0.000148316, 7.52459e-05 )
+
+[node name="Ct_BagFlap_Control" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.999856, 0.0169565, 0, -0.0169565, 0.999856, 0, 0.000137152, 0.000143964 )
+
+[node name="Ct_BagRoll_Control" parent="Aim/DiceBoy/Idle/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
+transform = Transform( 1, 0, 0, 0, 0.999938, 0.0110698, 0, -0.0110698, 0.999938, 0, 7.70997e-05, 0.000116121 )
+
+[node name="Roll" parent="Aim/DiceBoy" instance=ExtResource( 12 )]
+visible = false
+
+[node name="Lt_Leg_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.79379e-09, 0 )
+
+[node name="roll" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Body" index="1"]
+transform = Transform( 0.70537, 0, 0, 0, 0.70537, -0.000348129, 0, 0.000348129, 0.70537, 0, 0.00202057, -0.00012206 )
+
 [node name="ShootDelay" type="Timer" parent="."]
 wait_time = 0.1
 
@@ -158,3 +248,7 @@ one_shot = true
 [connection signal="timeout" from="ShootDelay" to="." method="_on_ShootDelay_timeout"]
 [connection signal="timeout" from="StateMachine/Rolling/RollTime" to="StateMachine/Rolling" method="_on_RollTime_timeout"]
 [connection signal="timeout" from="StateMachine/RollColldown" to="StateMachine" method="_on_RollColldown_timeout"]
+
+[editable path="Aim/DiceBoy/Walk"]
+[editable path="Aim/DiceBoy/Idle"]
+[editable path="Aim/DiceBoy/Roll"]

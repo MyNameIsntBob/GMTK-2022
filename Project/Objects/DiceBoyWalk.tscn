@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Art/3DModels/Player/Walk.dae" type="PackedScene" id=1]
+
+[node name="Walk" instance=ExtResource( 1 )]
+
+[node name="DiceGuy1" parent="." index="0"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+
+[node name="Lt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="2"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, 0.00501523, 0.00862921, 0.000883602 )
+
+[node name="Rt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="4"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, -0.00498302, 0.00859194, 0.000969847 )
+
+[node name="Ct_Bag_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="6"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, -9.57365e-06, 0.00340506, -0.00453993 )
+
+[node name="Ct_BagFlap_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="7"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, 3.44091e-05, 0.00244456, 0.000180852 )
+
+[node name="Ct_BagRoll_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="8"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, -5.09055e-05, 0.010976, -0.0058422 )
+
+[node name="Rt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="0"]
+transform = Transform( 0.998965, 0.027584, -0.0361647, -0.0301408, 0.996937, -0.0721727, 0.0340631, 0.073188, 0.996736, -3.60856e-05, 0.000743252, 0.00083192 )
+
+[node name="Lt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
+transform = Transform( 1, 0.00019149, -0.000191233, -0.000191363, 1, 0.000668194, 0.000191361, -0.000668157, 1, -2.35066e-07, 4.5221e-07, -0.000357778 )
+
+[node name="Ct_Back_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
+transform = Transform( 0.999956, -0.00361486, 0.00867329, 0.00386314, 0.999578, -0.0287809, -0.0085656, 0.0288132, 0.999548, 3.44091e-05, 0.000236465, 0.000180852 )
+
+[node name="Rt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
+transform = Transform( 0.998857, 0.0460862, -0.0127009, -0.044349, 0.992529, 0.113663, 0.0178443, -0.112969, 0.993439, -0.00028422, 0.000110469, 0.000791627 )
+
+[node name="Lt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
+transform = Transform( 0.999582, -0.0255701, 0.0134575, 0.0266851, 0.995539, -0.0904983, -0.0110834, 0.0908195, 0.995806, 0.00015321, 0.000295927, -0.000504151 )
+
+[node name="Ct_BagFlap_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.992116, -0.125327, 0, 0.125327, 0.992116, 0, -0.000926316, -0.00114425 )
+
+[node name="Ct_BagRoll_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00020833, 0 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "default"
