@@ -23,7 +23,7 @@ func _on_Area_body_entered(body):
 	if body == self || body.team == shot_by.team:
 		return 
 	
-	body.damage(attack_damage)
+	body.damage(attack_damage, velocity)
 	queue_free()
 
 
