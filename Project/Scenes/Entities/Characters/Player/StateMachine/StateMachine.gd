@@ -29,6 +29,13 @@ func initialize(initial_state):
 	current_state.enter()
 
 
+func _process(delta):
+	if $RollColldown.time_left:
+		Ui.dash_colldown = 5 - $RollColldown.time_left
+	else:
+		Ui.dash_colldown = 5
+
+
 func _physics_process(delta):
 	if current_state:
 		current_state.update(delta)
