@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Art/UI/Dice/DiceUI-Final_0007_Blue.png" type="Texture" id=1]
 [ext_resource path="res://Art/UI/Bars/HealthBarUI-Final_0002_Layer-10.png" type="Texture" id=2]
@@ -18,6 +18,7 @@
 [ext_resource path="res://Art/UI/Dice/DiceUi_Final_0013_DiceFullyCharged.png" type="Texture" id=16]
 [ext_resource path="res://Art/UI/ReloadBar/ReloadUI-Final_0002_Grey.png" type="Texture" id=17]
 [ext_resource path="res://Resources/Upbeat_Happy_No_Copyright_Free_Ener_getmp3.pro.mp3" type="AudioStream" id=18]
+[ext_resource path="res://Resources/MainText.tres" type="DynamicFont" id=19]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 10 )
@@ -217,15 +218,16 @@ __meta__ = {
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -82.0
-margin_top = 20.0
-margin_right = -42.0
-margin_bottom = 60.0
+margin_left = -151.0
+margin_top = 26.0
+margin_right = -60.0
+margin_bottom = 117.0
 
 [node name="Label" type="Label" parent="MarginContainer2"]
-margin_top = 4.0
-margin_right = 40.0
-margin_bottom = 35.0
+margin_right = 91.0
+margin_bottom = 91.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 19 )
 text = "Score:
 "
 __meta__ = {

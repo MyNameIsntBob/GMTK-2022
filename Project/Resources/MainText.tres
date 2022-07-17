@@ -3,4 +3,5 @@
 [ext_resource path="res://Art/UI/Font/MATURASC.TTF" type="DynamicFontData" id=1]
 
 [resource]
+size = 32
 font_data = ExtResource( 1 )
