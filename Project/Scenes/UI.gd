@@ -6,16 +6,21 @@ export (NodePath) var hp_bar_path
 var hp_bar_node
 export (NodePath) var dash_bar_path
 var dash_bar_node
+export (NodePath) var reload_bar_path
+var reload_bar_node
 
 var hp : int setget set_hp
 var side : int = 1 setget set_side
 var dash_colldown : float setget set_dash_colldown
 
+var reload_time : float setget set_reload_time
+var max_reload_time : float setget set_max_reload_time
 
 func _ready():
 	dice_node = get_node(dice_path)
 	hp_bar_node = get_node(hp_bar_path)
 	dash_bar_node = get_node(dash_bar_path)
+	reload_bar_node = get_node(reload_bar_path)
 
 
 func set_side(new_side):
@@ -33,3 +38,13 @@ func set_hp(new_hp):
 func set_dash_colldown(new_time):
 	dash_bar_node.value = new_time
 	dash_colldown = new_time
+
+
+func set_reload_time(new_reload_time):
+	reload_bar_node.value = new_reload_time
+	reload_time = new_reload_time
+
+
+func set_max_reload_time(new_max_reload_time):
+	reload_bar_node.max_value = new_max_reload_time
+	max_reload_time = new_max_reload_time

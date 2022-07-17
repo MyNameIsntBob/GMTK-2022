@@ -26,6 +26,11 @@ func _process(delta):
 	
 	if Input.is_action_pressed('shoot'):
 		shoot()
+	
+	if can_shoot:
+		Ui.reload_time = $ShootDelay.wait_time
+	else:
+		Ui.reload_time = $ShootDelay.wait_time - $ShootDelay.time_left
 
 
 func set_side(new_side):
@@ -41,6 +46,7 @@ func set_side(new_side):
 	shoot_distance = gun.shoot_distance
 	shoot_damage = gun.shoot_damage
 	$ShootDelay.wait_time = gun.shoot_speed
+	Ui.max_reload_time = gun.shoot_speed
 	
 	side = new_side
 
