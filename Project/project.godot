@@ -36,6 +36,10 @@ config/name="GMTK-2022"
 run/main_scene="res://Scenes/World.tscn"
 config/icon="res://Art/icon.png"
 
+[autoload]
+
+Ui="*res://Scenes/UI.tscn"
+
 [input]
 
 ui_left={

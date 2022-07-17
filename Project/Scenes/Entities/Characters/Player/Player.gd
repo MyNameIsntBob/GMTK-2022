@@ -13,8 +13,8 @@ var guns = {
 
 func _ready():
 	team = 1
-	health = 25
-	self.side = 5
+	self.health = 25
+	self.side = 1
 
 func _process(delta):
 	if !is_instance_valid($Camera):
@@ -29,6 +29,7 @@ func _process(delta):
 
 
 func set_side(new_side):
+	Ui.set_side(new_side)
 	shoot_pos = []
 	gun_name = guns[new_side]
 	var gun = $Aim.get_node(gun_name)
@@ -42,6 +43,12 @@ func set_side(new_side):
 	$ShootDelay.wait_time = gun.shoot_speed
 	
 	side = new_side
+
+
+func set_health(new_health):
+	Ui.hp = new_health
+	
+	.set_health(new_health)
 
 
 func queue_free():

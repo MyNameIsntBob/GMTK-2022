@@ -1,7 +1,7 @@
 extends KinematicBody
 class_name Character
 
-export var health = 3
+export var health = 3 setget set_health
 
 export var acceleration = 10
 export var max_speed = 0.8
@@ -43,6 +43,10 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity)
 
 
+func set_health(new_health):
+	health = new_health
+
+
 func shoot():
 	if !can_shoot:
 		return
@@ -75,7 +79,7 @@ func shoot_gun(pos):
 
 
 func damage(amount):
-	health -= amount
+	self.health -= amount
 	
 	if health <= 0:
 		queue_free()
