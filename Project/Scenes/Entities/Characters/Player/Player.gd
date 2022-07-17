@@ -15,7 +15,7 @@ var guns = {
 func _ready():
 	team = 1
 	self.health = 25
-	self.side = 1
+	self.side = 6
 
 func _process(delta):
 	if !is_instance_valid($Camera):

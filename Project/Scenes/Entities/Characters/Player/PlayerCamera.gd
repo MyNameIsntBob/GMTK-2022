@@ -5,6 +5,10 @@ onready var initial_rotation := rotation_degrees as Vector3
 
 export var reset_speed := 0.1
 
+export var kickback_speed := 0.2
+var kicking_back : bool = false
+var kickback_to : Vector3
+
 func mouse_position():
 	var dropPlane  = Plane(Vector3(0, 1, 0), 1)
 	var mouse_pos = $Node2D.get_global_mouse_position()
@@ -18,9 +22,17 @@ func mouse_position():
 
 
 func kickback(force, direction):
-	transform.origin += direction.normalized() * force
+	kicking_back = true
+	kickback_to = initial_position + (direction.normalized() * force)
 
 
 func _process(delta):
-	if transform.origin != initial_position:
+	if kicking_back:
+		if kickback_to.distance_to(transform.origin) < 0.1:
+			kicking_back = false
+		transform.origin = transform.origin.linear_interpolate(kickback_to, kickback_speed)
+	else:
 		transform.origin = transform.origin.linear_interpolate(initial_position, reset_speed)
+#
+#	if transform.origin != initial_position:
+#		transform.origin = transform.origin.linear_interpolate(initial_position, reset_speed)
