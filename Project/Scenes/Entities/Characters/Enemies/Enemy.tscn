@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Objects/FourSidedEnemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/4SidedEnemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/Enemy.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/StateMachine/StateMachine.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Entities/Characters/Enemies/StateMachine/Wondering.gd" type="Script" id=5]
@@ -52,17 +53,18 @@ script = ExtResource( 8 )
 
 [node name="Aim" type="Spatial" parent="."]
 
+[node name="4SidedEnemy" parent="Aim" instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
 [node name="FourSidedEnemy" parent="Aim" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0256853, 0 )
+visible = false
 
 [node name="Position3" type="Position3D" parent="Aim"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0 )
-
-[node name="Position4" type="Position3D" parent="Aim"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0.123488 )
 
 [node name="Position2" type="Position3D" parent="Aim"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0, 0.123488 )
 
 [node name="Position" type="Position3D" parent="Aim"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
