@@ -33,7 +33,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GMTK-2022"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://Art/icon.png"
 
 [autoload]

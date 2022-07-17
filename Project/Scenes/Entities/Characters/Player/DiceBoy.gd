@@ -4,11 +4,8 @@ var animation : String = 'Walk' setget set_animation
 var current_boy
 
 func set_animation(new_animation):
-	print('set_animation')
 	var old_boy = get_node(animation)
 	var new_boy = get_node(new_animation)
-	print(old_boy)
-	print(new_boy)
 	
 	old_boy.visible = false
 	new_boy.visible = true

@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 479.0
+margin_top = 254.0
+margin_right = 544.0
+margin_bottom = 346.0
+
+[node name="Play" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_right = 65.0
+margin_bottom = 20.0
+text = "Play"
+
+[node name="Controls" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 24.0
+margin_right = 65.0
+margin_bottom = 44.0
+text = "Controls"
+
+[node name="Credis" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 48.0
+margin_right = 65.0
+margin_bottom = 68.0
+text = "Credis"
+
+[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 65.0
+margin_bottom = 92.0
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

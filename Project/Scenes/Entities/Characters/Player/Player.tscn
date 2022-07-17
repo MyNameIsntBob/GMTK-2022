@@ -551,40 +551,40 @@ script = ExtResource( 10 )
 [node name="Walk" parent="Aim/DiceBoy" instance=ExtResource( 7 )]
 
 [node name="Lt_Arm_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="2"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, 0.00499482, 0.00858419, 0.000903513 )
+transform = Transform( 0.99941, 0.01333, -0.0316618, -0.014101, 0.999606, -0.0242548, 0.031326, 0.024687, 0.999204, 0.00493336, 0.00852326, 0.00105004 )
 
 [node name="Rt_Arm_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="4"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, -0.0050014, 0.00859748, 0.000876405 )
+transform = Transform( 0.99941, 0.01333, -0.0316618, -0.014101, 0.999606, -0.0242548, 0.031326, 0.024687, 0.999204, -0.00506074, 0.00866427, 0.00073679 )
 
 [node name="Ct_Bag_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="6"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, -2.40241e-07, 0.00336038, -0.00455107 )
+transform = Transform( 0.99941, 0.01333, -0.0316618, -0.014101, 0.999606, -0.0242548, 0.031326, 0.024687, 0.999204, 3.315e-05, 0.00336332, -0.00455052 )
 
 [node name="Ct_BagFlap_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="7"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, -1.35663e-05, 0.00242243, 0.000172618 )
+transform = Transform( 0.99941, 0.01333, -0.0316618, -0.014101, 0.999606, -0.0242548, 0.031326, 0.024687, 0.999204, -0.00012817, 0.00242388, 0.00017338 )
 
 [node name="Ct_BagRoll_00_Pad" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Joint" index="8"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, 1.77513e-05, 0.0109237, -0.00588766 )
+transform = Transform( 0.99941, 0.01333, -0.0316618, -0.014101, 0.999606, -0.0242548, 0.031326, 0.024687, 0.999204, 0.0001817, 0.0109291, -0.0058841 )
 
 [node name="Rt_Leg_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="0"]
-transform = Transform( 1, -9.6e-05, 9.6e-05, 9.6e-05, 1, 9.216e-09, -9.6e-05, 0, 1, 1.2e-07, 2.4e-07, -4.80388e-05 )
+transform = Transform( 1, -9.6e-05, 9.6e-05, 9.6e-05, 1, 9.216e-09, -9.6e-05, 0, 1, 1.2e-07, 2.4e-07, 0.00078465 )
 
 [node name="Lt_Leg_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
-transform = Transform( 0.996713, -0.0381857, 0.0714421, 0.0433285, 0.996472, -0.0718782, -0.0684453, 0.0747374, 0.994852, 5.4243e-05, 0.000669331, 0.00079382 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Ct_Back_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
-transform = Transform( 0.999995, 0.00157762, -0.00261301, -0.00164022, 0.999708, -0.0241327, 0.00257417, 0.0241368, 0.999705, -1.35663e-05, 0.000214337, 0.000172618 )
+transform = Transform( 0.99997, 0.0070195, -0.00335365, -0.00699162, 0.999941, 0.00825401, 0.00341139, -0.00823031, 0.999961, -1.63309e-05, 2.5091e-07, 1.90909e-05 )
 
 [node name="Rt_Arm_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
-transform = Transform( 0.994562, 0.098519, -0.0337868, -0.0959392, 0.992854, 0.0709628, 0.0405365, -0.0673353, 0.996907, -0.00061977, -0.000240643, 0.00061006 )
+transform = Transform( 0.997679, 0.0655652, -0.0183762, -0.063154, 0.991893, 0.110268, 0.025457, -0.108852, 0.993732, -0.00040676, 1.176e-05, 0.00080421 )
 
 [node name="Lt_Arm_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
-transform = Transform( 0.996896, -0.0725975, 0.0304758, 0.0733551, 0.997004, -0.0245225, -0.0286042, 0.026682, 0.999235, 0.000457703, -0.000177111, -1.4108e-05 )
+transform = Transform( 0.99762, -0.061121, 0.0319172, 0.063655, 0.994297, -0.08557, -0.026505, 0.087398, 0.995821, 0.00037188, 0.00010557, -0.00040576 )
 
 [node name="Ct_BagFlap_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
-transform = Transform( 1, 0, 0, 0, 0.990292, -0.139005, 0, 0.139005, 0.990292, 0, -0.00101724, -0.00127809 )
+transform = Transform( 1, 0, 0, 0, 0.997319, -0.073171, 0, 0.073171, 0.997319, 0, -0.00056005, -0.00065077 )
 
 [node name="Ct_BagRoll_Control" parent="Aim/DiceBoy/Walk/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.000305544, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Idle" parent="Aim/DiceBoy" instance=ExtResource( 11 )]
 visible = false
@@ -668,18 +668,6 @@ mesh = SubResource( 12 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Ct_Back_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Rt_Arm_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Lt_Arm_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Ct_Bag_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Ct_BagFlap_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Ct_BagRoll_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
