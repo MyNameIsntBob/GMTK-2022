@@ -81,16 +81,16 @@ shoot_distance = 5.0
 bullet_speed = 10
 
 [node name="Position4" type="Position3D" parent="Aim/CornerShot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
 
 [node name="Position5" type="Position3D" parent="Aim/CornerShot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0 )
 
 [node name="Position3" type="Position3D" parent="Aim/CornerShot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0.1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0 )
 
 [node name="Position6" type="Position3D" parent="Aim/CornerShot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0.1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1 )
 
 [node name="WideShot" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
