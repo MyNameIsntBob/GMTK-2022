@@ -59,7 +59,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0, -0.1 )
 
 [node name="Shotgun" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
-shoot_speed = 2.0
+shoot_speed = 1.5
 shoot_damage = 5
 shoot_distance = 0.3
 bullet_speed = 25
@@ -76,7 +76,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
 [node name="CornerShot" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
 shoot_speed = 1.0
-shoot_damage = 3
+shoot_damage = 4
 shoot_distance = 5.0
 bullet_speed = 10
 
@@ -94,7 +94,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0.1 )
 
 [node name="WideShot" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
-shoot_speed = 2.0
+shoot_speed = 1.5
 shoot_damage = 2
 shoot_distance = 2.0
 bullet_speed = 20
