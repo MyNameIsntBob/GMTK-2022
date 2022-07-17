@@ -8,5 +8,5 @@ func mouse_position():
 		project_ray_normal(mouse_pos)
 	)
 	pos.y = 0
-	pos.z -= 0.3
+	pos.z -= 0.4
 	return pos

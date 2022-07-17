@@ -1,7 +1,7 @@
 extends KinematicBody
 class_name Character
 
-export var health = 3 setget set_health
+export var health = 5 setget set_health
 
 export var acceleration = 10
 export var max_speed = 0.8
