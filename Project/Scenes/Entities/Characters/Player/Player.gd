@@ -1,6 +1,7 @@
 extends Character
 
 var side : int setget set_side
+var kickback
 
 var guns = {
 	1: 'Sniper',
@@ -47,9 +48,20 @@ func set_side(new_side):
 	shoot_damage = gun.shoot_damage
 	$ShootDelay.wait_time = gun.shoot_speed
 	Ui.max_reload_time = gun.shoot_speed
+	kickback = gun.kickback
 	
 	side = new_side
 
+
+func shoot():
+	if !can_shoot:
+		return
+	
+	var direction = $Aim/Position.global_transform.origin - self.global_transform.origin
+	
+	$Camera.kickback(kickback, direction * -1)
+	velocity += direction * -100 * kickback
+	.shoot()
 
 func set_health(new_health):
 	Ui.hp = new_health

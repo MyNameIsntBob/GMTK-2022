@@ -78,8 +78,10 @@ func shoot_gun(pos):
 	bullet.velocity = (pos.global_transform.origin - self.global_transform.origin) * bullet_speed
 
 
-func damage(amount):
+func damage(amount, direction):
 	self.health -= amount
+	
+	velocity += direction
 	
 	if health <= 0:
 		queue_free()
