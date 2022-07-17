@@ -40,6 +40,10 @@ config/icon="res://Art/icon.png"
 
 Ui="*res://Scenes/UI.tscn"
 
+[display]
+
+window/size/fullscreen=true
+
 [input]
 
 ui_left={

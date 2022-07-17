@@ -8,37 +8,37 @@
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
 
 [node name="Lt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, -0.00636326, 0.00056777 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.005, -0.00637725, 0.00056777 )
 
 [node name="Rt_Arm_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, -0.00636326, 0.00056777 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, -0.00637726, 0.00056777 )
 
 [node name="Ct_Bag_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0117248, -0.00474804 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0117388, -0.00474804 )
 
 [node name="Ct_BagFlap_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="7"]
-transform = Transform( 0.889672, 0.453304, 0.0547686, -0.0541326, -0.0143886, 0.99843, 0.45338, -0.89124, 0.0117375, -0.00182905, -0.00600752, -0.0543973 )
+transform = Transform( 0.876669, 0.481093, -0.00139718, -0.109285, 0.201971, 0.973275, 0.468518, -0.853088, 0.229637, -0.00235989, 0.00818306, -0.0376049 )
 
 [node name="Ct_BagRoll_00_Pad" parent="DiceGuy1/DiceGuy_Joint" index="8"]
-transform = Transform( 0.895373, 0.444858, -0.0202325, -0.0132191, 0.0719652, 0.997319, 0.445121, -0.892705, 0.0703162, 0.00156252, -0.0132226, -0.062395 )
+transform = Transform( 0.876669, 0.481093, -0.00139718, -0.109285, 0.201971, 0.973275, 0.468518, -0.853088, 0.229637, 0.00164351, 0.00378879, -0.0461353 )
 
 [node name="Rt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00344302, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0042468, 0 )
 
 [node name="Lt_Leg_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 0.99681, 0.0798147, 0, -0.0798147, 0.99681, 0, 0.003425, 0.000199568 )
+transform = Transform( 1, 0, 0, 0, 0.999191, 0.0402154, 0, -0.0402154, 0.999191, 0, 0.00419051, 7.96676e-05 )
 
 [node name="Ct_Back_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Rt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="0"]
-transform = Transform( -0.190816, 0.38494, -0.748586, -0.0108624, 0.879704, 0.474527, 0.297329, 0.27918, -0.46308, -0.0138258, -0.00323997, -0.00630244 )
+transform = Transform( -0.437105, 0.339104, -0.838617, -0.306288, 0.822297, 0.484353, 0.875482, 0.456987, -0.249248, -0.0147246, -0.00226582, -0.00464804 )
 
 [node name="Lt_Arm_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="1"]
-transform = Transform( 0.030865, -0.886557, 0.453868, -0.00308988, 0.454963, 0.890465, -0.343224, -0.083821, 0.0327985, 0.0152691, -0.00178641, -0.00188526 )
+transform = Transform( 0.201069, -0.494302, 0.846543, 0.0585697, 0.867922, 0.493355, -0.99596, -0.0487518, 0.199917, 0.0116994, -0.00103417, 0.00147022 )
 
 [node name="Ct_Bag_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control" index="2"]
-transform = Transform( 0.895373, 0.444858, -0.0202325, -0.0132191, 0.0719652, 0.997319, 0.445121, -0.892705, 0.0703162, -0.00227942, -0.00977976, -0.0544959 )
+transform = Transform( 0.876669, 0.481093, -0.00139712, -0.109285, 0.20197, 0.973275, 0.468518, -0.853088, 0.229637, -0.00235989, 0.00597496, -0.0376049 )
 
 [node name="Ct_BagFlap_Control" parent="DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -47,7 +47,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="roll" parent="DiceGuy1/DiceGuy_Body" index="1"]
-transform = Transform( 1.2662, 0, 0, 0, -0.784158, 0.917478, 0, -0.917478, -0.784158, 0, 0.0123512, 0.00558632 )
+transform = Transform( 1.38259, 0, 0, 0, 0.849282, 0.968333, 0, -0.968333, 0.849282, 0, 0.0026091, 0.00572553 )
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "default"

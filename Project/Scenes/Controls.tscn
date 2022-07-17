@@ -9,3 +9,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="BackButton" parent="MarginContainer" instance=ExtResource( 1 )]
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContrainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 475.0
+margin_top = 208.0
+margin_right = 548.0
+margin_bottom = 392.0
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContrainer"]
+margin_right = 73.0
+margin_bottom = 184.0
+text = "Shoot:
+Left Click
+
+Movement:
+WASD
+
+DodgeRoll:
+Space
+
+Aim:
+Mouse"
