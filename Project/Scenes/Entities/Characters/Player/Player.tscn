@@ -116,10 +116,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
 
 [node name="MachineGun" type="Spatial" parent="Aim"]
 script = ExtResource( 1 )
-shoot_speed = 0.3
+shoot_speed = 0.2
 shoot_damage = 1
 shoot_distance = 5.0
-bullet_speed = 10
+bullet_speed = 15
 
 [node name="Position" type="Position3D" parent="Aim/MachineGun"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
