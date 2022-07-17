@@ -30,11 +30,11 @@ margin_right = 65.0
 margin_bottom = 44.0
 text = "Controls"
 
-[node name="Credis" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
+[node name="Credits" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 margin_top = 48.0
 margin_right = 65.0
 margin_bottom = 68.0
-text = "Credis"
+text = "Credits"
 
 [node name="Exit" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer"]
 margin_top = 72.0
@@ -44,4 +44,5 @@ text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/Exit" to="." method="_on_Exit_pressed"]

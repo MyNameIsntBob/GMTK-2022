@@ -667,12 +667,6 @@ mesh = SubResource( 12 )
 [node name="Lt_Leg_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Ct_Back_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
-[node name="Ct_BagRoll_Control" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Control/Ct_Main_Control/Ct_Back_Control/Ct_Bag_Control" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-
 [node name="roll" parent="Aim/DiceBoy/Roll/DiceGuy1/DiceGuy_Body" index="1"]
 transform = Transform( 0.746825, 0, 0, 0, 0.738529, -0.023046, 0, 0.023046, 0.738529, 0, 0.0018893, -0.000304922 )
 mesh = SubResource( 13 )

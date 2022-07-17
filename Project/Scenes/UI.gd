@@ -56,3 +56,8 @@ func set_reload_time(new_reload_time):
 func set_max_reload_time(new_max_reload_time):
 	reload_bar_node.max_value = new_max_reload_time
 	max_reload_time = new_max_reload_time
+
+
+func _input(event):
+	if event.is_action_pressed('ui_cancel'):
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")

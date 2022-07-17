@@ -1,6 +1,11 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Art/3DModels/Environment/Map_ChildRoom.dae" type="PackedScene" id=1]
+[ext_resource path="res://Art/3DModels/Environment/Orange.material" type="Material" id=3]
+[ext_resource path="res://Art/3DModels/Environment/Green.material" type="Material" id=4]
+[ext_resource path="res://Art/3DModels/Environment/Pink.material" type="Material" id=5]
+[ext_resource path="res://Art/3DModels/Environment/Room1.material" type="Material" id=6]
+[ext_resource path="res://Art/3DModels/Environment/lambert1.material" type="Material" id=7]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 data = PoolVector3Array( -0.0094, 0.096, 0.0055, -0.0084, 0.0956, 0.0055, -0.0094, 0.096, -0.0189, -0.0084, 0.0956, 0.0055, -0.0084, 0.0956, -0.0189, -0.0094, 0.096, -0.0189, -0.0098, 0.097, -0.0189, -0.0098, 0.097, 0.0055, -0.0094, 0.096, 0.0055, -0.0094, 0.096, 0.0055, -0.0094, 0.096, -0.0189, -0.0098, 0.097, -0.0189, -0.0084, 0.096, 0.0064, -0.0084, 0.097, 0.0068, 0.0159, 0.096, 0.0064, 0.0159, 0.097, 0.0068, 0.0159, 0.096, 0.0064, -0.0084, 0.097, 0.0068, -0.0084, 0.0956, 0.0055, -0.0084, 0.096, 0.0064, 0.0159, 0.0956, 0.0055, 0.0159, 0.096, 0.0064, 0.0159, 0.0956, 0.0055, -0.0084, 0.096, 0.0064, -0.0094, 0.1214, 0.0064, -0.0094, 0.097, 0.0064, -0.0098, 0.097, 0.0055, -0.0098, 0.097, 0.0055, -0.0098, 0.1214, 0.0055, -0.0094, 0.1214, 0.0064, -0.0094, 0.1214, 0.0064, -0.0084, 0.1214, 0.0068, -0.0094, 0.097, 0.0064, -0.0084, 0.1214, 0.0068, -0.0084, 0.097, 0.0068, -0.0094, 0.097, 0.0064, 0.0169, 0.096, -0.0189, 0.0169, 0.096, 0.0055, 0.0173, 0.097, 0.0055, 0.0173, 0.097, 0.0055, 0.0173, 0.097, -0.0189, 0.0169, 0.096, -0.0189, 0.0159, 0.0956, 0.0055, 0.0169, 0.096, 0.0055, 0.0159, 0.0956, -0.0189, 0.0169, 0.096, 0.0055, 0.0169, 0.096, -0.0189, 0.0159, 0.0956, -0.0189, 0.0159, 0.1214, 0.0068, 0.0169, 0.1214, 0.0064, 0.0159, 0.097, 0.0068, 0.0169, 0.1214, 0.0064, 0.0169, 0.097, 0.0064, 0.0159, 0.097, 0.0068, 0.0173, 0.097, 0.0055, 0.0169, 0.097, 0.0064, 0.0173, 0.1214, 0.0055, 0.0169, 0.1214, 0.0064, 0.0173, 0.1214, 0.0055, 0.0169, 0.097, 0.0064, -0.0094, 0.1223, -0.0189, -0.0094, 0.1223, 0.0055, -0.0098, 0.1214, 0.0055, -0.0098, 0.1214, 0.0055, -0.0098, 0.1214, -0.0189, -0.0094, 0.1223, -0.0189, -0.0084, 0.1227, 0.0055, -0.0094, 0.1223, 0.0055, -0.0084, 0.1227, -0.0189, -0.0094, 0.1223, 0.0055, -0.0094, 0.1223, -0.0189, -0.0084, 0.1227, -0.0189, 0.0159, 0.1223, 0.0064, -0.0084, 0.1223, 0.0064, -0.0084, 0.1227, 0.0055, -0.0084, 0.1227, 0.0055, 0.0159, 0.1227, 0.0055, 0.0159, 0.1223, 0.0064, -0.0084, 0.1214, 0.0068, -0.0084, 0.1223, 0.0064, 0.0159, 0.1214, 0.0068, 0.0159, 0.1223, 0.0064, 0.0159, 0.1214, 0.0068, -0.0084, 0.1223, 0.0064, 0.0169, 0.1223, 0.0055, 0.0159, 0.1227, 0.0055, 0.0169, 0.1223, -0.0189, 0.0159, 0.1227, 0.0055, 0.0159, 0.1227, -0.0189, 0.0169, 0.1223, -0.0189, 0.0173, 0.1214, 0.0055, 0.0169, 0.1223, 0.0055, 0.0173, 0.1214, -0.0189, 0.0169, 0.1223, 0.0055, 0.0169, 0.1223, -0.0189, 0.0173, 0.1214, -0.0189, -0.0094, 0.1214, -0.0198, -0.0098, 0.1214, -0.0189, -0.0094, 0.097, -0.0198, -0.0098, 0.097, -0.0189, -0.0094, 0.097, -0.0198, -0.0098, 0.1214, -0.0189, -0.0094, 0.097, -0.0198, -0.0084, 0.097, -0.0202, -0.0094, 0.1214, -0.0198, -0.0084, 0.097, -0.0202, -0.0084, 0.1214, -0.0202, -0.0094, 0.1214, -0.0198, -0.0084, 0.1223, -0.0198, -0.0084, 0.1214, -0.0202, 0.0159, 0.1223, -0.0198, 0.0159, 0.1214, -0.0202, 0.0159, 0.1223, -0.0198, -0.0084, 0.1214, -0.0202, 0.0159, 0.1227, -0.0189, -0.0084, 0.1227, -0.0189, -0.0084, 0.1223, -0.0198, -0.0084, 0.1223, -0.0198, 0.0159, 0.1223, -0.0198, 0.0159, 0.1227, -0.0189, 0.0159, 0.097, -0.0202, 0.0169, 0.097, -0.0198, 0.0159, 0.1214, -0.0202, 0.0169, 0.097, -0.0198, 0.0169, 0.1214, -0.0198, 0.0159, 0.1214, -0.0202, 0.0173, 0.097, -0.0189, 0.0173, 0.1214, -0.0189, 0.0169, 0.1214, -0.0198, 0.0169, 0.1214, -0.0198, 0.0169, 0.097, -0.0198, 0.0173, 0.097, -0.0189, -0.0084, 0.096, -0.0198, -0.0084, 0.0956, -0.0189, 0.0159, 0.096, -0.0198, 0.0159, 0.0956, -0.0189, 0.0159, 0.096, -0.0198, -0.0084, 0.0956, -0.0189, -0.0084, 0.097, -0.0202, -0.0084, 0.096, -0.0198, 0.0159, 0.097, -0.0202, 0.0159, 0.096, -0.0198, 0.0159, 0.097, -0.0202, -0.0084, 0.096, -0.0198, 0.0159, 0.1214, 0.0068, -0.0084, 0.097, 0.0068, -0.0084, 0.1214, 0.0068, 0.0159, 0.1214, 0.0068, 0.0159, 0.097, 0.0068, -0.0084, 0.097, 0.0068, 0.0159, 0.1227, 0.0055, -0.0084, 0.1227, 0.0055, 0.0159, 0.1227, -0.0189, -0.0084, 0.1227, 0.0055, -0.0084, 0.1227, -0.0189, 0.0159, 0.1227, -0.0189, 0.0159, 0.097, -0.0202, -0.0084, 0.1214, -0.0202, -0.0084, 0.097, -0.0202, 0.0159, 0.097, -0.0202, 0.0159, 0.1214, -0.0202, -0.0084, 0.1214, -0.0202, 0.0159, 0.0956, 0.0055, -0.0084, 0.0956, -0.0189, -0.0084, 0.0956, 0.0055, 0.0159, 0.0956, 0.0055, 0.0159, 0.0956, -0.0189, -0.0084, 0.0956, -0.0189, 0.0173, 0.1214, 0.0055, 0.0173, 0.1214, -0.0189, 0.0173, 0.097, 0.0055, 0.0173, 0.097, 0.0055, 0.0173, 0.1214, -0.0189, 0.0173, 0.097, -0.0189, -0.0098, 0.1214, 0.0055, -0.0098, 0.097, 0.0055, -0.0098, 0.097, -0.0189, -0.0098, 0.097, -0.0189, -0.0098, 0.1214, -0.0189, -0.0098, 0.1214, 0.0055, -0.0098, 0.097, 0.0055, -0.0094, 0.097, 0.0064, -0.0092, 0.0962, 0.0063, -0.0092, 0.0962, 0.0063, -0.0094, 0.096, 0.0055, -0.0098, 0.097, 0.0055, -0.0092, 0.0962, 0.0063, -0.0084, 0.096, 0.0064, -0.0084, 0.0956, 0.0055, -0.0084, 0.0956, 0.0055, -0.0094, 0.096, 0.0055, -0.0092, 0.0962, 0.0063, -0.0084, 0.097, 0.0068, -0.0084, 0.096, 0.0064, -0.0092, 0.0962, 0.0063, -0.0092, 0.0962, 0.0063, -0.0094, 0.097, 0.0064, -0.0084, 0.097, 0.0068, 0.0159, 0.0956, 0.0055, 0.0159, 0.096, 0.0064, 0.0167, 0.0962, 0.0063, 0.0167, 0.0962, 0.0063, 0.0169, 0.096, 0.0055, 0.0159, 0.0956, 0.0055, 0.0167, 0.0962, 0.0063, 0.0169, 0.097, 0.0064, 0.0173, 0.097, 0.0055, 0.0173, 0.097, 0.0055, 0.0169, 0.096, 0.0055, 0.0167, 0.0962, 0.0063, 0.0159, 0.097, 0.0068, 0.0169, 0.097, 0.0064, 0.0167, 0.0962, 0.0063, 0.0167, 0.0962, 0.0063, 0.0159, 0.096, 0.0064, 0.0159, 0.097, 0.0068, -0.0084, 0.1227, 0.0055, -0.0084, 0.1223, 0.0064, -0.0092, 0.1221, 0.0063, -0.0092, 0.1221, 0.0063, -0.0094, 0.1223, 0.0055, -0.0084, 0.1227, 0.0055, -0.0092, 0.1221, 0.0063, -0.0094, 0.1214, 0.0064, -0.0098, 0.1214, 0.0055, -0.0098, 0.1214, 0.0055, -0.0094, 0.1223, 0.0055, -0.0092, 0.1221, 0.0063, -0.0092, 0.1221, 0.0063, -0.0084, 0.1223, 0.0064, -0.0084, 0.1214, 0.0068, -0.0084, 0.1214, 0.0068, -0.0094, 0.1214, 0.0064, -0.0092, 0.1221, 0.0063, 0.0173, 0.1214, 0.0055, 0.0169, 0.1214, 0.0064, 0.0167, 0.1221, 0.0063, 0.0167, 0.1221, 0.0063, 0.0169, 0.1223, 0.0055, 0.0173, 0.1214, 0.0055, 0.0167, 0.1221, 0.0063, 0.0159, 0.1223, 0.0064, 0.0159, 0.1227, 0.0055, 0.0159, 0.1227, 0.0055, 0.0169, 0.1223, 0.0055, 0.0167, 0.1221, 0.0063, 0.0159, 0.1214, 0.0068, 0.0159, 0.1223, 0.0064, 0.0167, 0.1221, 0.0063, 0.0167, 0.1221, 0.0063, 0.0169, 0.1214, 0.0064, 0.0159, 0.1214, 0.0068, -0.0084, 0.1214, -0.0202, -0.0084, 0.1223, -0.0198, -0.0092, 0.1221, -0.0197, -0.0092, 0.1221, -0.0197, -0.0094, 0.1214, -0.0198, -0.0084, 0.1214, -0.0202, -0.0098, 0.1214, -0.0189, -0.0094, 0.1214, -0.0198, -0.0092, 0.1221, -0.0197, -0.0092, 0.1221, -0.0197, -0.0094, 0.1223, -0.0189, -0.0098, 0.1214, -0.0189, -0.0084, 0.1227, -0.0189, -0.0094, 0.1223, -0.0189, -0.0092, 0.1221, -0.0197, -0.0092, 0.1221, -0.0197, -0.0084, 0.1223, -0.0198, -0.0084, 0.1227, -0.0189, 0.0173, 0.1214, -0.0189, 0.0169, 0.1223, -0.0189, 0.0167, 0.1221, -0.0197, 0.0167, 0.1221, -0.0197, 0.0169, 0.1214, -0.0198, 0.0173, 0.1214, -0.0189, 0.0159, 0.1214, -0.0202, 0.0169, 0.1214, -0.0198, 0.0167, 0.1221, -0.0197, 0.0167, 0.1221, -0.0197, 0.0159, 0.1223, -0.0198, 0.0159, 0.1214, -0.0202, 0.0159, 0.1227, -0.0189, 0.0159, 0.1223, -0.0198, 0.0167, 0.1221, -0.0197, 0.0167, 0.1221, -0.0197, 0.0169, 0.1223, -0.0189, 0.0159, 0.1227, -0.0189, -0.0084, 0.0956, -0.0189, -0.0084, 0.096, -0.0198, -0.0092, 0.0962, -0.0197, -0.0092, 0.0962, -0.0197, -0.0094, 0.096, -0.0189, -0.0084, 0.0956, -0.0189, -0.0098, 0.097, -0.0189, -0.0094, 0.096, -0.0189, -0.0092, 0.0962, -0.0197, -0.0092, 0.0962, -0.0197, -0.0094, 0.097, -0.0198, -0.0098, 0.097, -0.0189, -0.0092, 0.0962, -0.0197, -0.0084, 0.096, -0.0198, -0.0084, 0.097, -0.0202, -0.0084, 0.097, -0.0202, -0.0094, 0.097, -0.0198, -0.0092, 0.0962, -0.0197, 0.0173, 0.097, -0.0189, 0.0169, 0.097, -0.0198, 0.0167, 0.0962, -0.0197, 0.0167, 0.0962, -0.0197, 0.0169, 0.096, -0.0189, 0.0173, 0.097, -0.0189, 0.0159, 0.0956, -0.0189, 0.0169, 0.096, -0.0189, 0.0167, 0.0962, -0.0197, 0.0167, 0.0962, -0.0197, 0.0159, 0.096, -0.0198, 0.0159, 0.0956, -0.0189, 0.0159, 0.097, -0.0202, 0.0159, 0.096, -0.0198, 0.0167, 0.0962, -0.0197, 0.0167, 0.0962, -0.0197, 0.0169, 0.097, -0.0198, 0.0159, 0.097, -0.0202 )
@@ -121,125 +126,202 @@ data = PoolVector3Array( 0.005, 0.005, 0.005, -0.005, -0.005, 0.005, -0.005, 0.0
 [node name="imagePlane1" parent="." index="0"]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, -0.729363 )
 
+[node name="Cube" parent="." index="1"]
+material/0 = ExtResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="Cube" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube/StaticBody" index="0"]
 shape = SubResource( 1 )
+
+[node name="Prism" parent="." index="2"]
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="Prism" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Prism/StaticBody" index="0"]
 shape = SubResource( 2 )
 
+[node name="CylinderHalf" parent="." index="3"]
+material/0 = ExtResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="CylinderHalf" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="CylinderHalf/StaticBody" index="0"]
 shape = SubResource( 3 )
+
+[node name="RectangleLong" parent="." index="4"]
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="RectangleLong" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong/StaticBody" index="0"]
 shape = SubResource( 4 )
 
+[node name="Rectangle" parent="." index="5"]
+material/0 = ExtResource( 4 )
+
 [node name="StaticBody" type="StaticBody" parent="Rectangle" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Rectangle/StaticBody" index="0"]
 shape = SubResource( 5 )
+
+[node name="Cylinder" parent="." index="6"]
+layers = 129
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Cylinder" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder/StaticBody" index="0"]
 shape = SubResource( 6 )
 
+[node name="Arch" parent="ArchGroup" index="0"]
+material/0 = ExtResource( 4 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup/Arch" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup/Arch/StaticBody" index="0"]
 shape = SubResource( 7 )
+
+[node name="HiddenArch" parent="ArchGroup" index="1"]
+material/0 = ExtResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup/HiddenArch" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup/HiddenArch/StaticBody" index="0"]
 shape = SubResource( 8 )
 
+[node name="pCube1" parent="." index="8"]
+material/0 = ExtResource( 7 )
+
 [node name="StaticBody" type="StaticBody" parent="pCube1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="pCube1/StaticBody" index="0"]
 shape = SubResource( 9 )
+
+[node name="RectangleLong1" parent="." index="9"]
+layers = 129
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="RectangleLong1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong1/StaticBody" index="0"]
 shape = SubResource( 10 )
 
+[node name="RectangleLong2" parent="." index="10"]
+material/0 = ExtResource( 4 )
+
 [node name="StaticBody" type="StaticBody" parent="RectangleLong2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong2/StaticBody" index="0"]
 shape = SubResource( 11 )
+
+[node name="RectangleLong3" parent="." index="11"]
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="RectangleLong3" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong3/StaticBody" index="0"]
 shape = SubResource( 12 )
 
+[node name="RectangleLong4" parent="." index="12"]
+material/0 = ExtResource( 4 )
+
 [node name="StaticBody" type="StaticBody" parent="RectangleLong4" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong4/StaticBody" index="0"]
 shape = SubResource( 13 )
+
+[node name="Cylinder1" parent="." index="13"]
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Cylinder1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder1/StaticBody" index="0"]
 shape = SubResource( 14 )
 
+[node name="Cylinder2" parent="." index="14"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="Cylinder2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder2/StaticBody" index="0"]
 shape = SubResource( 15 )
+
+[node name="Prism1" parent="." index="15"]
+material/0 = ExtResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Prism1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Prism1/StaticBody" index="0"]
 shape = SubResource( 16 )
 
+[node name="Arch_ncl1_1" parent="ArchGroup1" index="0"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup1/Arch_ncl1_1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup1/Arch_ncl1_1/StaticBody" index="0"]
 shape = SubResource( 17 )
+
+[node name="HiddenArch_ncl1_1" parent="ArchGroup1" index="1"]
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup1/HiddenArch_ncl1_1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup1/HiddenArch_ncl1_1/StaticBody" index="0"]
 shape = SubResource( 18 )
 
+[node name="Arch_ncl1_2" parent="ArchGroup2" index="0"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup2/Arch_ncl1_2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup2/Arch_ncl1_2/StaticBody" index="0"]
 shape = SubResource( 19 )
+
+[node name="HiddenArch_ncl1_2" parent="ArchGroup2" index="1"]
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup2/HiddenArch_ncl1_2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup2/HiddenArch_ncl1_2/StaticBody" index="0"]
 shape = SubResource( 20 )
 
+[node name="Arch1" parent="ArchGroup2" index="2"]
+material/0 = ExtResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup2/Arch1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup2/Arch1/StaticBody" index="0"]
 shape = SubResource( 21 )
+
+[node name="Arch_ncl1_3" parent="ArchGroup3" index="0"]
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup3/Arch_ncl1_3" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup3/Arch_ncl1_3/StaticBody" index="0"]
 shape = SubResource( 22 )
 
+[node name="HiddenArch_ncl1_3" parent="ArchGroup3" index="1"]
+material/0 = ExtResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup3/HiddenArch_ncl1_3" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup3/HiddenArch_ncl1_3/StaticBody" index="0"]
 shape = SubResource( 23 )
 
+[node name="Cube1" parent="." index="19"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="Cube1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube1/StaticBody" index="0"]
 shape = SubResource( 24 )
+
+[node name="RectangleLong5" parent="." index="20"]
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="RectangleLong5" index="0"]
 
@@ -248,6 +330,7 @@ shape = SubResource( 25 )
 
 [node name="Arch_ncl1_4" parent="ArchGroup4" index="0"]
 transform = Transform( 1, 0, -9.31323e-10, 0, 1, 0, 9.31323e-10, 0, 1, -0.135021, 0.0102859, 0.13469 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup4/Arch_ncl1_4" index="0"]
 
@@ -256,61 +339,96 @@ shape = SubResource( 26 )
 
 [node name="HiddenArch_ncl1_4" parent="ArchGroup4" index="1"]
 transform = Transform( 1, 0, -2.79397e-09, 0, 1, 0, 2.79397e-09, 0, 1, -0.135021, 0.0102859, 0.13469 )
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup4/HiddenArch_ncl1_4" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup4/HiddenArch_ncl1_4/StaticBody" index="0"]
 shape = SubResource( 27 )
 
+[node name="Arch_ncl1_5" parent="ArchGroup5" index="0"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="ArchGroup5/Arch_ncl1_5" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup5/Arch_ncl1_5/StaticBody" index="0"]
 shape = SubResource( 28 )
+
+[node name="HiddenArch_ncl1_5" parent="ArchGroup5" index="1"]
+material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="ArchGroup5/HiddenArch_ncl1_5" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="ArchGroup5/HiddenArch_ncl1_5/StaticBody" index="0"]
 shape = SubResource( 29 )
 
+[node name="Prism2" parent="." index="23"]
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="Prism2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Prism2/StaticBody" index="0"]
 shape = SubResource( 30 )
+
+[node name="RectangleLong6" parent="." index="24"]
+material/0 = ExtResource( 3 )
 
 [node name="StaticBody" type="StaticBody" parent="RectangleLong6" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="RectangleLong6/StaticBody" index="0"]
 shape = SubResource( 31 )
 
+[node name="Cube2" parent="." index="25"]
+layers = 129
+material/0 = ExtResource( 5 )
+
 [node name="StaticBody" type="StaticBody" parent="Cube2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cube2/StaticBody" index="0"]
 shape = SubResource( 32 )
+
+[node name="Rectangle1" parent="." index="26"]
+material/0 = ExtResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="Rectangle1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Rectangle1/StaticBody" index="0"]
 shape = SubResource( 33 )
 
+[node name="Cylinder3" parent="." index="27"]
+material/0 = ExtResource( 3 )
+
 [node name="StaticBody" type="StaticBody" parent="Cylinder3" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Cylinder3/StaticBody" index="0"]
 shape = SubResource( 34 )
+
+[node name="Wall3" parent="Room" index="0"]
+material/0 = ExtResource( 6 )
 
 [node name="StaticBody" type="StaticBody" parent="Room/Wall3" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Room/Wall3/StaticBody" index="0"]
 shape = SubResource( 35 )
 
+[node name="Wall2" parent="Room" index="1"]
+material/0 = ExtResource( 6 )
+
 [node name="StaticBody" type="StaticBody" parent="Room/Wall2" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Room/Wall2/StaticBody" index="0"]
 shape = SubResource( 36 )
 
+[node name="Wall1" parent="Room" index="2"]
+material/0 = ExtResource( 6 )
+
 [node name="StaticBody" type="StaticBody" parent="Room/Wall1" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Room/Wall1/StaticBody" index="0"]
 shape = SubResource( 37 )
+
+[node name="Wall" parent="Room" index="3"]
+material/0 = ExtResource( 6 )
 
 [node name="StaticBody" type="StaticBody" parent="Room/Wall" index="0"]
 
